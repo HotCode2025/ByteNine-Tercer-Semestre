@@ -69,11 +69,31 @@ class Monitor{
         return this._idMonitor;
 
     }
+    toString(){
         return `Monitor: [idMonitor: ${this._idMonitor}, marca: ${this._marca}, tamaño: ${this._tamanio}]`;
     }
 }
 
 let monitor1 = new Monitor("LENOVO", 3);
 let monitor2 = new Monitor("HP", 6);
+
 console.log(monitor1.toString());
 console.log(monitor2.toString());
+
+class Computadora {
+    static contadorComputadoras = 0;
+    constructor(nombre, monitor, teclado, raton) {
+        this._idComputadora = ++Computadora.contadorComputadoras;
+        this._nombre = nombre;
+        this._monitor = monitor;
+        this._teclado = teclado;
+        this._raton = raton;
+    }
+    toString() {
+        return `Computadora: [${this._idComputadora}: ${this._nombre}\n  ${this._monitor}\n  ${this._teclado}\n  ${this._raton}]`;
+    }
+}
+let computadora1 = new Computadora("Gamer", "Monitor LG 24", "Teclado Mecánico", "Raton Logitech");
+let computadora2 = new Computadora("Oficina", "Monitor Dell 22", "Teclado Membrana", "Raton Microsoft");
+console.log(computadora1.toString());
+console.log(computadora2.toString());
