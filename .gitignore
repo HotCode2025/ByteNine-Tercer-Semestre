@@ -1,0 +1,82 @@
+# ============================================================================
+# .GITIGNORE UNIVERSAL - TECNICATURA (Python, Java, JS)
+# ============================================================================
+
+# --- SISTEMA OPERATIVO ---
+# Bloquea archivos basura de Windows que no aportan al código
+desktop.ini
+# Archivo oculto de miniaturas de imágenes.
+Thumbs.db
+# Equivalente a desktop.ini para usuarios de Mac.
+.DS_Store
+
+# --- LINUX ---
+# Archivo de configuración de visualización de carpetas (opcional)
+.directory
+
+# ============================================================================
+# --- PYTHON (PyCharm / Ambientes Virtuales) ---
+# .idea/: Configuración personal del IDE.
+.idea/
+# _pycache_/: Archivos temporales de ejecución.
+_pycache_/
+# *.pyc: Archivos de Python compilados.
+*.pyc
+# venv/ y .venv/: Entornos virtuales (Estándar y Oculto).
+venv/
+.venv/
+
+# ============================================================================
+# --- JAVA (Apache NetBeans e IntelliJ IDEA) ---
+# build/ y out/: Carpetas donde el código se traduce a lenguaje máquina.
+build/
+out/
+# dist/ y nbdist/: Carpetas con el programa terminado y empaquetado.
+dist/
+nbdist/
+# nbproject/private/: Configuraciones privadas de NetBeans.
+nbproject/private/
+# .nb-gradle/: Configuraciones locales de automatización Gradle.
+.nb-gradle/
+# *.iml y .idea_modules/: Archivos de configuración de módulos de IntelliJ.
+*.iml
+.idea_modules/
+
+# ============================================================================
+# --- JAVASCRIPT (VS Code / Node.js / Quokka) ---
+# node_modules/: Librerías externas pesadas.
+#Porque es como llevar los ladrillos cuando mandás los planos de una casa. 
+#Es mejor mandar solo los planos (el código) y que cada uno compre sus ladrillos
+# en su ciudad (instalación local).
+node_modules/
+# .quokka/: Archivos temporales de la extensión Quokka.
+.quokka/
+# .cache/ y .npm/: Datos temporales de motores JS y Node.js.
+.cache/
+.npm/
+# coverage/: Reportes de pruebas (Testing).
+coverage/
+# .vscode/: Configuraciones del editor y .env: Seguridad (Contraseñas).
+.vscode/
+.env
+
+# ============================================================================
+# --- EXTRAS Y MANTENIMIENTO ---
+# *.log: Registros de errores locales.
+*.log
+# tmp/: Carpeta de archivos temporales.
+tmp/
+# --- ARCHIVOS COMPRIMIDOS ---
+# Bloquea respaldos pesados que ocupan espacio innecesario.
+#Porque en GitHub se sube el código "suelto". Si alguien sube un .zip,
+# Git no puede ver qué cambió adentro y el historial de versiones se pierde.
+*.zip
+*.rar
+*.7z
+
+# ============================================================================
+# --- BASES DE DATOS (SQL / Workbench) ---
+# Bloquea archivos de recuperación y configuraciones de conexión
+*.bak
+*.sql.bak
+.temp/
