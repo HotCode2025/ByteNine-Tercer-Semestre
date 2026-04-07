@@ -97,3 +97,30 @@ let computadora1 = new Computadora("Gamer", "Monitor LG 24", "Teclado Mecánico"
 let computadora2 = new Computadora("Oficina", "Monitor Dell 22", "Teclado Membrana", "Raton Microsoft");
 console.log(computadora1.toString());
 console.log(computadora2.toString());
+
+class Orden {
+    get idOrden(){
+    return this._idorden;
+    }
+    agregarComputadora (computadora){
+        this._computadoras. push(computadora); //Agregamos los objetos
+    }
+    mostrarorden (){
+    let computadorasOrden = ''; //Variable temporal
+    for (let computadora of this._computadoras){
+        computadorasOrden += '\n${computadora) ' ;
+    }
+    console. log(`Orden: ${this._idOrden}, Computadoras: ${computadorasOrden}`);
+    }
+}
+
+let orden1 = new Orden();
+orden1.agregarComputadora(computadora1);
+orden1.agregarComputadora(computadora2);
+orden1.agregarComputadora(computadora2);//Se puede repetir una orden
+orden1.mostrarOrden();
+
+let orden2 = new Orden();
+orden1.agregarComputadora(computadora2);
+orden1.agregarComputadora(computadora1);
+orden1.mostrarOrden();
