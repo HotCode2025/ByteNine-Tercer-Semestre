@@ -1,8 +1,8 @@
 resultado = None
-a = '10'
-b = 0
 
 try:
+    a = int(input('Digite el primer número: '))
+    b = int(input('Digite el segundo número: '))
     resultado = a/b  # modificamos
 except  TypeError as e:
     print(f'TypeError - Ocurrió un error: {type(e)}')
