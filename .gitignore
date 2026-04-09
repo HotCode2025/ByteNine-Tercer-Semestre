@@ -28,19 +28,18 @@ venv/
 
 # ============================================================================
 # --- JAVA (Apache NetBeans e IntelliJ IDEA) ---
-# build/ y out/: Carpetas donde el código se traduce a lenguaje máquina.
-build/
-out/
-# dist/ y nbdist/: Carpetas con el programa terminado y empaquetado.
-dist/
-nbdist/
-# nbproject/private/: Configuraciones privadas de NetBeans.
+# NetBeans specific
+/.cache/
+/.nb-gradle-properties
+/.nb-gradle-version
+
+# Carpetas y archivos de Configuración Local de NetBeans que causaban el problema
 nbproject/private/
-# .nb-gradle/: Configuraciones locales de automatización Gradle.
-.nb-gradle/
-# *.iml y .idea_modules/: Archivos de configuración de módulos de IntelliJ.
-*.iml
-.idea_modules/
+
+# Metadatos de Eclipse (si alguien del equipo usa este IDE)
+.classpath
+.project
+.settings/
 
 # ============================================================================
 # --- JAVASCRIPT (VS Code / Node.js / Quokka) ---
@@ -80,3 +79,4 @@ tmp/
 *.bak
 *.sql.bak
 .temp/
+/Tecnicatura3J/Leccion01/MundoPC/nbproject/private/
