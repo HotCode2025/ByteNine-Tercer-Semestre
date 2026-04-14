@@ -9,4 +9,5 @@ x crea un archivo
 t esta es para texto o text, 
 b archivo binarios, 
 w+ leer y escribe son iguales r+
-Saludos a todos los alumnos de la tecnicaturaCon esto terminamos.
+Saludos a todos los alumnos de la tecnicatura
+Con esto terminamos.
