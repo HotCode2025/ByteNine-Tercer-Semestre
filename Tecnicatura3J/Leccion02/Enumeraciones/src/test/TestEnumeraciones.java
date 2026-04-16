@@ -1,14 +1,48 @@
 
 package test;
 
+import enumeraciones.Continentes;
 import enumeraciones.Dias;
-import static enumeraciones.Dias.LUNES;
+
 
 public class TestEnumeraciones {
     public static void main(String[] args) {
-        System.out.println("Dia 1: "+Dias.LUNES);
-        indicarDiaSemana(Dias.LUNES); // Las enumeraciones se tratan como cadenas
+        //System.out.println("Dia 1: "+Dias.LUNES);
+        //indicarDiaSemana(Dias.LUNES); // Las enumeraciones se tratan como cadenas
         // Ahora no se deben utilizar comillas, se accede a traves del operador de punto
+        
+        // probamos el metodo continentes
+        //Acceder a un elemento
+        System.out.println("Continente No. 4: "+Continentes.AMERICA);
+        System.out.println("No. de paises en el 4to. continente: "
+                +Continentes.AMERICA.getPaises());
+        System.out.println("No. de habitantes en el 4to. Continente: "
+                +Continentes.AMERICA.getHabitantes());
+        
+        // Agregamos la ejecucion del resto de los continentes
+        System.out.println("Continente No. 1: "+Continentes.AFRICA);
+        System.out.println("No. de paises en el 4to. continente: "
+                +Continentes.AFRICA.getPaises());
+        System.out.println("No. de habitantes en el 4to. Continente: "
+                +Continentes.AFRICA.getHabitantes());
+        
+        System.out.println("Continente No. 4: "+Continentes.EUROPA);
+        System.out.println("No. de paises en el 4to. continente: "
+                +Continentes.EUROPA.getPaises());
+        System.out.println("No. de habitantes en el 4to. Continente: "
+                +Continentes.EUROPA.getHabitantes());
+        
+        System.out.println("Continente No. 4: "+Continentes.ASIA);
+        System.out.println("No. de paises en el 4to. continente: "
+                +Continentes.ASIA.getPaises());
+        System.out.println("No. de habitantes en el 4to. Continente: "
+                +Continentes.ASIA.getHabitantes());
+        
+        System.out.println("Continente No. 4: "+Continentes.OCEANIA);
+        System.out.println("No. de paises en el 4to. continente: "
+                +Continentes.OCEANIA.getPaises());
+        System.out.println("No. de habitantes en el 4to. Continente: "
+                +Continentes.OCEANIA.getHabitantes());
     }
     
     // metodo para imprimir
