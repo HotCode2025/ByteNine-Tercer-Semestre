@@ -1,5 +1,5 @@
 # Importación
-from dominio.pelicula import Pelicula
+import os
 
 # Defiinición de la clase
 class CatalogoPeliculas:
@@ -9,19 +9,19 @@ class CatalogoPeliculas:
     ruta_archivo: str ="peliculas.txt"
 
     # Método Agregar_peliculas()
-    @staticmethod
-    def agregar_pelicula(pelicula: Pelicula):
+    @classmethod
+    def agregar_pelicula(cls, pelicula):
 
-        with open(CatalogoPeliculas.ruta_archivo, "a", encoding="utf-8") as archivo:
+        with open(cls.ruta_archivo, "a", encoding="utf-8") as archivo:
             archivo.write(str(pelicula) + "\n")
 
         print(f' Película "{pelicula}" agregada correctamente.')
 
     # Método listar_peliculas()
-    @staticmethd
-    def listar_peliculas():
+    @classmethod
+    def listar_peliculas(cls):
         try:
-            with open(CatalogoPeliculas.ruta_archivo, "r", encoding="utf-8") as archivo:
+            with open(cls.ruta_archivo, "r", encoding="utf-8") as archivo:
                 lineas =[l.strip() for l in archivo.readlines() if l.strip()]
 
             if not lineas:
@@ -39,11 +39,10 @@ class CatalogoPeliculas:
             print(" El catálogo aún no existe. Agregue una película primero.")
 
     # Método elimimar()
-    @staticmethod
-    def eliminar():
-        import os
+    @classmethod
+    def eliminar(cls):
         try:
-            os.remove(CatalogoPeliculas.ruta_archivo)
+            os.remove(cls.ruta_archivo)
             print(" Archivo de películas eliminado correctamente.")
 
         except FileNotFoundError:
