@@ -1,3 +1,4 @@
+//  MUNDO PC - CON POLIMORFISMO
 // CLASE PADRE DISPOSITIVO DE ENTRADA 
 class DispositivoEntrada{
 
@@ -27,6 +28,13 @@ class DispositivoEntrada{
     set marca(marca) { 
         this._marca = marca; 
     }
+
+    // *** MÉTODO POLIMÓRFICO BASE ***
+    // Este método existe en el padre para que cada hijo lo REESCRIBA.
+    // Si una clase hija no lo reescribe, va a usar este mensaje genérico.
+    describir() {
+        return `Dispositivo de entrada | Tipo: ${this._tipoEntrada} | Marca: ${this._marca}`;
+    }
 }
 
     // CLASES HIJAS: Raton y Teclado
@@ -46,6 +54,12 @@ class Raton extends DispositivoEntrada {
     // METODO toString: Define el formato de la ficha tecnica  del objeto.
     toString(){
         return `Raton: [idRaton: ${this._idRaton}, tipoEntrada: ${this._tipoEntrada}, marca: ${this._marca}]`;
+    }
+
+    // *** POLIMORFISMO: Raton REESCRIBE describir() ***
+    // Mismo nombre de método que el padre, pero comportamiento propio de Raton.
+    describir() {
+        return `Ratón #${this._idRaton} → Conexión: ${this._tipoEntrada} | Marca: ${this._marca} | Tipo: Periférico de puntero`;
     }
 }
 
@@ -72,6 +86,12 @@ class Teclado extends DispositivoEntrada{
     toString(){
         return `Teclado: [idTeclado: ${this._idTeclado}, tipoEntrada: ${this._tipoEntrada}, marca: ${this._marca} ]`
     }
+
+    // *** POLIMORFISMO: Teclado REESCRIBE describir() ***
+    // Mismo nombre de método, descripción diferente y propia de Teclado.
+    describir() {
+        return `Teclado #${this._idTeclado} → Conexión: ${this._tipoEntrada} | Marca: ${this._marca} | Tipo: Periférico de escritura`;
+    }
 }
 
 // PRUEBAS DE INSTANCIA(Creamos los objetos reales)
@@ -97,11 +117,18 @@ class Monitor{
     toString(){
         return `Monitor: [idMonitor: ${this._idMonitor}, marca: ${this._marca}, tamaño: ${this._tamanio}]`;
     }
+
+    // *** POLIMORFISMO: Monitor también tiene describir() ***
+    // Monitor no hereda de DispositivoEntrada, pero al tener el mismo nombre
+    // de método, puede participar del polimorfismo
+    describir() {
+        return `Monitor #${this._idMonitor} → Marca: ${this._marca} | Tamaño: ${this._tamanio}" | Tipo: Dispositivo de salida visual`;
+    }
 }
 
 // PRUEBAS DE INSTANCIA(Creamos los objetos reales)
-let monitor1 = new Monitor("LENOVO", 3);
-let monitor2 = new Monitor("HP", 6);
+let monitor1 = new Monitor("LENOVO", 27);
+let monitor2 = new Monitor("HP", 24);
 
 console.log(monitor1.toString());
 console.log(monitor2.toString());
@@ -121,6 +148,18 @@ class Computadora {
     // con toString llamamos  automaticamente al toString de cada componente
     toString() {
         return `Computadora: [${this._idComputadora}: ${this._nombre}\n  ${this._monitor}\n  ${this._teclado}\n  ${this._raton}]`;
+    }
+
+    // *** POLIMORFISMO: Computadora también reescribe describir() ***
+    // Llama internamente al describir() de cada componente.
+    // Acá el polimorfismo actúa en CADENA: cada objeto sabe cómo describirse.
+    describir() {
+        return (
+            `Computadora #${this._idComputadora} → "${this._nombre}"\n` +
+            `     ${this._monitor.describir()}\n` +
+            `     ${this._teclado.describir()}\n` +
+            `     ${this._raton.describir()}`
+        );
     }
 }
 
@@ -171,6 +210,31 @@ class Orden {
 
 
 // SECTOR PRUEBAS  FINALES
+
+//  DEMOSTRACIÓN DEL POLIMORFISMO
+
+console.log('======================================================');
+console.log(' DEMOSTRACIÓN DE POLIMORFISMO — método describir()');
+
+// Arreglo con objetos de distintos tipos. Todos tienen describir().
+// JavaScript va a llamar a la versión correcta de cada clase automáticamente.
+// mismo mensaje, pero respuesta diferente según el objeto.
+let componentes = [raton1, raton2, teclado1, teclado2, monitor1, monitor2];
+
+console.log('\n--- Describiendo periféricos y monitores ---');
+for (let componente of componentes) {
+    console.log(componente.describir()); // Cada objeto responde a su manera
+}
+
+console.log('\n--- Describiendo computadoras completas ---');
+console.log(computadora1.describir()); // Encadena el describir() de sus partes
+console.log('');
+console.log(computadora2.describir());
+
+// Órdenes
+
+console.log('======================================================');
+console.log(' ÓRDENES');
 
 // Creacion de instancia de gestion
 let orden1 = new Orden();
