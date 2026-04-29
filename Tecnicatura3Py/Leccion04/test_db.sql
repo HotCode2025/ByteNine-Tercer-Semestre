@@ -2,12 +2,12 @@
 -- PostgreSQL database dump
 --
 
-\restrict fRBcYBfHpSZJ8AlrIXgfb6isaB4I25SdBdLhJJ7cHhk0hlgGorn39WOF5lyrHXR
+\restrict fjPtXo0IA9kspDAyTnWJbMzeVcBpyYWhPg6eYRatzflTxEZKcWz63ZwogrUlPdG
 
 -- Dumped from database version 18.3
 -- Dumped by pg_dump version 18.3
 
--- Started on 2026-04-29 20:21:05
+-- Started on 2026-04-29 20:25:00
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -77,7 +77,6 @@ ALTER TABLE ONLY public.persona ALTER COLUMN id_persona SET DEFAULT nextval('pub
 
 INSERT INTO public.persona VALUES (1, 'Carla', 'Gomez', 'kgomez@mail.com');
 INSERT INTO public.persona VALUES (2, 'Juan', 'Perez', 'jperez@mail.com');
-INSERT INTO public.persona VALUES (3, 'Susana', 'Lara', 'slara@mail.com');
 
 
 --
@@ -98,11 +97,11 @@ ALTER TABLE ONLY public.persona
     ADD CONSTRAINT persona_pk PRIMARY KEY (id_persona);
 
 
--- Completed on 2026-04-29 20:21:05
+-- Completed on 2026-04-29 20:25:01
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict fRBcYBfHpSZJ8AlrIXgfb6isaB4I25SdBdLhJJ7cHhk0hlgGorn39WOF5lyrHXR
+\unrestrict fjPtXo0IA9kspDAyTnWJbMzeVcBpyYWhPg6eYRatzflTxEZKcWz63ZwogrUlPdG
 
