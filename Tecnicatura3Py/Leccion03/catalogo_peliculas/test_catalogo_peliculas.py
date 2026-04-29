@@ -1,5 +1,5 @@
-from Leccion02.catalogo_peliculas.Dominio import Pelicula
-from Leccion02.catalogo_peliculas.catalogo_peliculas import CatalogoPeliculas
+from Leccion03.catalogo_peliculas.Dominio import Pelicula
+from Leccion03.catalogo_peliculas.catalogo_peliculas import CatalogoPeliculas
 
 opcion = None
 

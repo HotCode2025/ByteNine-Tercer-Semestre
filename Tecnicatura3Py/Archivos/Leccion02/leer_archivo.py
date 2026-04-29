@@ -1,7 +1,7 @@
 #Diferentes formas de leer un archivo
 
 #podemos tambien especificar la ruta del archivo donde queremso trabajar
-#archivo = open('C:\\Users\\gabri\\OneDrive\\Escritorio\\ByteNine-Tercer-Semestre\\Tecnicatura3Py\\Archivos\\Leccion02\\prueba.txt', 'r', encoding="utf8")
+#archivo = open('C:\\Users\\gabri\\OneDrive\\Escritorio\\ByteNine-Tercer-Semestre\\Tecnicatura3Py\\Archivos\\Leccion03\\prueba.txt', 'r', encoding="utf8")
 
 archivo = open('prueba.txt','r', encoding="utf8") #Las letras son: "r" read, "a" append, "w" write, "x"
 
