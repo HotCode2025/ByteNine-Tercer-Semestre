@@ -2,12 +2,12 @@
 -- PostgreSQL database dump
 --
 
-\restrict D67s7WeGg1uQGSLdLTkumeK909YMr3NYr4qBuBC6mV9aVpC1zmBXG2X1DgvFcRF
+\restrict fRBcYBfHpSZJ8AlrIXgfb6isaB4I25SdBdLhJJ7cHhk0hlgGorn39WOF5lyrHXR
 
 -- Dumped from database version 18.3
 -- Dumped by pg_dump version 18.3
 
--- Started on 2026-04-29 19:39:37
+-- Started on 2026-04-29 20:21:05
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -77,6 +77,7 @@ ALTER TABLE ONLY public.persona ALTER COLUMN id_persona SET DEFAULT nextval('pub
 
 INSERT INTO public.persona VALUES (1, 'Carla', 'Gomez', 'kgomez@mail.com');
 INSERT INTO public.persona VALUES (2, 'Juan', 'Perez', 'jperez@mail.com');
+INSERT INTO public.persona VALUES (3, 'Susana', 'Lara', 'slara@mail.com');
 
 
 --
@@ -85,7 +86,7 @@ INSERT INTO public.persona VALUES (2, 'Juan', 'Perez', 'jperez@mail.com');
 -- Name: persona_id_persona_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.persona_id_persona_seq', 3, true);
+SELECT pg_catalog.setval('public.persona_id_persona_seq', 5, true);
 
 
 --
@@ -97,11 +98,11 @@ ALTER TABLE ONLY public.persona
     ADD CONSTRAINT persona_pk PRIMARY KEY (id_persona);
 
 
--- Completed on 2026-04-29 19:39:37
+-- Completed on 2026-04-29 20:21:05
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict D67s7WeGg1uQGSLdLTkumeK909YMr3NYr4qBuBC6mV9aVpC1zmBXG2X1DgvFcRF
+\unrestrict fRBcYBfHpSZJ8AlrIXgfb6isaB4I25SdBdLhJJ7cHhk0hlgGorn39WOF5lyrHXR
 
