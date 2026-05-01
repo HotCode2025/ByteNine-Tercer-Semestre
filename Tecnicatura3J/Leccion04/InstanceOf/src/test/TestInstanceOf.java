@@ -11,7 +11,7 @@ public class TestInstanceOf {
         Empleado empleado1 = new Empleado("Juan", 10000);
         
         // Este método serviría para identificar el tipo del objeto
-        // determinarTipo(empleado1);
+         determinarTipo(empleado1);
         
         // Ahora reutilizamos la misma variable, pero le asignamos un objeto Gerente
         // IMPORTANTE: Gerente es una subclase de Empleado
@@ -19,7 +19,7 @@ public class TestInstanceOf {
         empleado1 = new Gerente("José", 5000, "Sistemas");
         
         // Se llama al método para determinar el tipo REAL del objeto
-        determinarTipo(empleado1);
+        //determinarTipo(empleado1);
     }
     
     // Método que determina el tipo del objeto usando instanceof
@@ -30,7 +30,8 @@ public class TestInstanceOf {
         if(empleado instanceof Gerente){
             System.out.println("Es de tipo Gerente");
             Gerente gerente = (Gerente)empleado;
-            gerente.getDepartamento();
+            //((Gerente) empleado).getDepartamento();
+            System.out.println("gerente = "+gerente.getDepartamento());
         }
         
         // Si no es Gerente, se verifica si es Empleado
@@ -38,6 +39,8 @@ public class TestInstanceOf {
         // porque ya fue capturado en el if anterior
         else if(empleado instanceof Empleado){
             System.out.println("Es de tipo Empleado");
+            //Gerente gerente = (Gerente)empleado;
+            //System.out.println("gerente = "+gerente.getDepartamento());
         }        
         
         else if(empleado instanceof Object){
