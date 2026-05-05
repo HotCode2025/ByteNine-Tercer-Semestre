@@ -20,4 +20,24 @@ let miFuncionFlecha = () => {
 // Hay mas variantes para funciones flecha que vamos a ir viendo
 miFuncionFlecha();
 
+// lo hacemos en una sola linea
+const saludar = () => console.log('Saludos a todos desde esta función flecha');
+
+console.log(saludar);
+
+// Otro ejemplo
+const saludar2 = ()  => {
+    return 'Saludos desde la función dos'
+
+}
+
+console.log(saludar2);
+
+// Simplificamos la funcion anterior
+const saludar3 = () => ' Saludos desde la función flecha tres';
+
+console.log(saludar3)
+
+
+
 
