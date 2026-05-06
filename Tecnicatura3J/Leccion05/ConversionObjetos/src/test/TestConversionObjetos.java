@@ -10,8 +10,8 @@ public class TestConversionObjetos {
         Empleado empleado;
         // asignamos referecia con los parametros necesarios
         empleado = new Escritor("Juan", 5000, TipoEscritura.CLASICO);
-        //System.out.println("empleado = "+empleado);
-        System.out.println(empleado.obtenerDetalles()); //Si queremoa acceder a metodos Escritor
+        System.out.println("empleado = "+empleado);
+        //System.out.println(empleado.obtenerDetalles()); //Si queremoa acceder a metodos Escritor
         //empleado.getTipoEscritura();// No se puede hacer necesita la conversion
         
         //Conversion de objetos
