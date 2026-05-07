@@ -61,6 +61,12 @@ public class Empleado {
             return false;
         }
         final Empleado other = (Empleado) obj;
+        if (Double.doubleToLongBits(this.sueldo) != Double.doubleToLongBits(other.sueldo)){
+            return false;
+        }
+        if (!Objects.equals(this.nombre,other.nombre)) {
+            return false;
+        }
         return true;
     }
     
