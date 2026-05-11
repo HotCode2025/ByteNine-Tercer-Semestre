@@ -32,3 +32,14 @@ function sumar(operando1, operando2, funcionCallback){ //funtion callback apunta
 
 //llamamos a la funcion sumar. Pasamos los argumentos 
 sumar(5,3,imp);
+
+//Llamadas asincronas con uso setTimeout
+function miFuncionCallback(){
+    console.log('Saludo asincrono despues de 3 segundos');
+}
+
+setTimeout(miFuncionCallback, 5000);
+
+setTimeout(function(){ console.log('Saludo asincrono 2')}, 3000);
+
+setTimeout( () => console.log('Saludo asincrono 3'), 4000);
