@@ -4,9 +4,9 @@ conexion = psycopg2.connect(user="admin", password="admin", host="127.0.0.1", po
 try:
     with conexion:
         with conexion.cursor() as cursor:
-            sentencia = 'DELETE FROM persona WHERE id_persona IN %s'
-            entrada = input('Digite los números de registros a eliminar (separados por coma): ')
-            valores = (tuple(entrada.split(', ')),) # tupla de tuplas
+            sentencia = 'DELETE FROM persona WHERE id_persona=%s'
+            entrada = input('Digite el número de registro a eliminar: ')
+            valores = (entrada, ) # Es una tupla de valores
             cursor.execute(sentencia, valores) #De esta manera ejecutamos la sentencia
             registros_eliminados = cursor.rowcount
             print(f'Los registros eliminados son: {registros_eliminados}')
