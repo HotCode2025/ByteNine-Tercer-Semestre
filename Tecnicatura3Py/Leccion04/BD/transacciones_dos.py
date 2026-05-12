@@ -1,15 +1,15 @@
 import psycopg2 as bd # Esto es para poder conectarnos a Postgre
 
-conexion = bd.connect(user="postgres", password="Marcos0146", host="127.0.0.1", port="5432", database="test_db")
+conexion = bd.connect(user="postgres", password="admin", host="127.0.0.1", port="5432", database="test_bd")
 try:
     conexion.autocommit = False # esto directamente no deberia estar, inicia la transacción
     cursor = conexion.cursor()
     sentencia = 'INSERT INTO persona(nombre, apellido, email) VALUES (%s, %s, %s)'
-    valores = ('Carlos', 'Lara', 'clara@mail.com' )
+    valores = ('Jorge', 'Prol', 'jprol@mail.com' )
     cursor.execute(sentencia, valores)
 
     sentencia = 'UPDATE persona SET  nombre=%s, apellido=%s, email=%s WHERE id_persona=%s'
-    valores = ('Juan', 'Juarez', 'jcjuarez@mail.com', 1)
+    valores = ('Juan', 'Juarez', 'jcperez@mail.com', 1)
     cursor.execute(sentencia,valores)
 
     conexion.commit() # Hacemos el commit manulamente, se cierra la transacción
