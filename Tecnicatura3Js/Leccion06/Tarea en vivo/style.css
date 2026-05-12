@@ -1,0 +1,32 @@
+body {
+    background-color: #1a1a2e;
+    color: #e94560;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background: #16213e;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    border: 2px solid #0f3460;
+}
+
+#fecha-texto {
+    font-size: 1.8rem;
+    color: #4ecca3;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+#reloj {
+    font-size: 6rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
