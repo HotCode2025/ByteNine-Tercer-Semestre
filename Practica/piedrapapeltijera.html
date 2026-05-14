@@ -1,22 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>piedra , papel  y tijera  </title>
-    <script src="codigo.js"></script>
+    <title>Piedra, Papel y Tijera - Pixel Edition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="piedrapapeltijera.css">
 </head>
 <body>
-    <h1>piedra 🪨, papel 📄 y tijera ✂ </h1>
+    <div class="game-container">
+        <h1>Piedra, Papel y Tijera</h1>
+        
+        <div class="scoreboard">
+            <div class="score">
+                <p>JUGADOR</p>
+                <span id="vidas-jugador">❤️❤️❤️</span>
+            </div>
+            <div class="score">
+                <p>PC</p>
+                <span id="vidas-pc">❤️❤️❤️</span>
+            </div>
+        </div>
 
-    <!-- Botón oculto al inicio, aparece cuando termina el juego -->
-    <button id="btnReiniciar" style="display:none;" onclick="location.reload()">
-        🔄 Jugar de nuevo
-    </button>
+        <div class="result-display">
+            <p id="mensaje">¡Elige tu jugada!</p>
+        </div>
 
-    <!-- Se ejecuta cuando el while de codigo.js ya terminó, y muestra el botón -->
-    <script>
-        document.getElementById("btnReiniciar").style.display = "block";
-    </script>
+        <div class="options">
+            <button class="pixel-btn" onclick="jugar(1)">🪨 Piedra</button>
+            <button class="pixel-btn" onclick="jugar(2)">📄 Papel</button>
+            <button class="pixel-btn" onclick="jugar(3)">✂️ Tijera</button>
+        </div>
+
+        <button id="reiniciar" class="pixel-btn-restart" onclick="reiniciarJuego()" style="display:none;">🔄 Jugar de nuevo</button>
+
+        <div class="battle-field">
+                <div class="choice-slot">
+                    <p>TÚ</p>
+                    <div id="jugada-jugador">?</div>
+                </div>
+            <div class="vs">VS</div>
+            <div class="choice-slot">
+                <p>PC</p>
+                <div id="jugada-pc">?</div>
+            </div>
+        </div>
+
+        <div class="result-display">
+            <p id="mensaje">¡Elige tu jugada!</p>
+        </div>
+
+    </div>
+
+    <script src="codigo.js"></script>
 </body>
 </html>
