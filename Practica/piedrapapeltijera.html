@@ -8,5 +8,15 @@
 </head>
 <body>
     <h1>piedra 🪨, papel 📄 y tijera ✂ </h1>
+
+    <!-- Botón oculto al inicio, aparece cuando termina el juego -->
+    <button id="btnReiniciar" style="display:none;" onclick="location.reload()">
+        🔄 Jugar de nuevo
+    </button>
+
+    <!-- Se ejecuta cuando el while de codigo.js ya terminó, y muestra el botón -->
+    <script>
+        document.getElementById("btnReiniciar").style.display = "block";
+    </script>
 </body>
 </html>
