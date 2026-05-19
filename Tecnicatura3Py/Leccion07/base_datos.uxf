@@ -1,0 +1,46 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>80</x><y>80</y><w>210</w><h>250</h></coordinates><panel_attributes>Conexion 
+--
+_-DATABASE: String_
+_-USERNAME: String_
+_-PASSWORD: String_
+_-DB PORT: String_
+_-HOST: String_
+_-conexion: connection_
+_-cursor: Curso_
+
+--
+_+obtenerConexion(cls): Connection_
+_+obtenerCursor(cls): Cursor_
+_+cerrar(cls)_
+--
+Responsabilidades:
+Administrar la conexión a la
+base de datos</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>760</x><y>100</y><w>270</w><h>250</h></coordinates><panel_attributes>Persona
+--
+-id_persona: int
+-nombre: String
+-apellido: String
+-email: String
+--
++__str__(): String
++metodo Get/Set de cada atributo
+--
+Responsabilidades:
+Crear objetos de la entidad
+de Persona</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>770</x><y>530</y><w>270</w><h>220</h></coordinates><panel_attributes>PersonaDao
+--
+_-SELECCIONAR: String_
+_-INSERTAR: String_
+_-ACTUALIZAR: String_
+_-ELIMINAR: String_
+--
+_+seleccionar(cls)_
+_+insertar(cls, persona)_
+_+actualizar(cls, persona)_
+_+eliminar(cls, persona)_
+--
+Responsabilidades:
+Realizar las operaciones sobre
+la BD de la entidad Persona</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>50</x><y>30</y><w>1300</w><h>800</h></coordinates><panel_attributes>acceso_datos
+--
+bg=gray</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>900</x><y>340</y><w>30</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;190;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>170</x><y>320</y><w>620</w><h>330</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>600;310;10;310;10;10</additional_attributes></element></diagram>
