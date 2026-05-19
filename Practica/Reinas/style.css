@@ -1,0 +1,50 @@
+body {
+    background-color: #1a1a2e;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background: #16213e;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* La cuadrícula mágica que se adapta a cualquier N */
+#tablero-html {
+    display: grid;
+    margin: 20px auto;
+    border: 4px solid #0f3460;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+/* Estilo para cada casilla */
+.casilla {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+/* Colores del ajedrez (blanco y negro intercalados) */
+.blanca { background-color: #e0e4e8; }
+.negra { background-color: #708090; }
+
+#arreglo-texto {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-family: monospace;
+    color: #4ecca3;
+    background: #0f3460;
+    padding: 10px;
+    border-radius: 5px;
+}
