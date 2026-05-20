@@ -1,6 +1,16 @@
-const N = 8; // Puedes cambiarlo a 8, 9, 10, etc.
-let tablero = new Array(N).fill(-1);
+let N = 8; 
+let tablero = [];
 
+// Elementos del DOM
+const valorNEl = document.getElementById('valor-n');
+const btnMas = document.getElementById('btn-mas');
+const btnMenos = document.getElementById('btn-menos');
+const btnResolver = document.getElementById('btn-resolver');
+const contenedorTablero = document.getElementById('tablero-html');
+const arregloTexto = document.getElementById('arreglo-texto');
+const estadoTexto = document.getElementById('estado-texto');
+
+// 1. ALGORITMO MATEMÁTICO (Backtracking)
 function esSeguro(fila, columna) {
     for (let i = 0; i < fila; i++) {
         let otraColumna = tablero[i];
@@ -23,42 +33,80 @@ function resolverNReinas(fila) {
     return false;
 }
 
-// NUEVA FUNCIÓN: Dibuja el tablero directamente en el HTML
-function dibujarTableroEnPantalla() {
-    const contenedorTablero = document.getElementById('tablero-html');
+// 2. FUNCIÓN DE RENDERIZADO VISUAL
+function ejecutarYDibujar() {
+    tablero = new Array(N).fill(-1);
     
-    // Configura la cuadrícula de CSS para que tenga N filas y N columnas
-    contenedorTablero.style.gridTemplateColumns = `repeat(${N}, 50px)`;
-    contenedorTablero.style.gridTemplateRows = `repeat(${N}, 50px)`;
+    // Intentar resolver
+    const solucionado = resolverNReinas(0);
+    
+    // Limpiar tablero anterior
+    contenedorTablero.innerHTML = '';
 
-    for (let i = 0; i < N; i++) {
-        for (let j = 0; j < N; j++) {
-            const casilla = document.createElement('div');
-            casilla.classList.add('casilla');
+    // Cálculo dinámico del tamaño de celda para que quepa en un área fija de 400px
+    const tamañoCelda = 400 / N;
 
-            // Lógica para intercalar los colores de las casillas del ajedrez
-            if ((i + j) % 2 === 0) {
-                casilla.classList.add('blanca');
-            } else {
-                casilla.classList.add('negra');
+    contenedorTablero.style.gridTemplateColumns = `repeat(${N}, ${tamañoCelda}px)`;
+    contenedorTablero.style.gridTemplateRows = `repeat(${N}, ${tamañoCelda}px)`;
+
+    if (solucionado) {
+        estadoTexto.textContent = "RESOLVIBLE";
+        estadoTexto.style.color = "#38ef7d";
+        arregloTexto.textContent = `[${tablero.join(', ')}]`;
+
+        // Crear las casillas HTML
+        for (let i = 0; i < N; i++) {
+            for (let j = 0; j < N; j++) {
+                const casilla = document.createElement('div');
+                casilla.classList.add('casilla');
+                casilla.style.width = `${tamañoCelda}px`;
+                casilla.style.height = `${tamañoCelda}px`;
+                casilla.style.fontSize = `${tamañoCelda * 0.6}px`; // Corona proporcional
+
+                // Color ajedrezado
+                if ((i + j) % 2 === 0) {
+                    casilla.classList.add('blanca');
+                } else {
+                    casilla.classList.add('negra');
+                }
+
+                // Inyectar corona si hay reina
+                if (tablero[i] === j) {
+                    casilla.textContent = "👑";
+                }
+
+                contenedorTablero.appendChild(casilla);
             }
-
-            // Si en esta posición hay una reina, le ponemos la corona
-            if (tablero[i] === j) {
-                casilla.textContent = "👑";
-            }
-
-            contenedorTablero.appendChild(casilla);
         }
+    } else {
+        estadoTexto.textContent = "SIN SOLUCIÓN";
+        estadoTexto.style.color = "#ff4e50";
+        arregloTexto.textContent = "---";
+        contenedorTablero.style.display = "block";
+        contenedorTablero.textContent = "No existe solución para este tamaño.";
     }
-
-    // Muestra el arreglo de índices debajo del tablero
-    document.getElementById('arreglo-texto').textContent = `Arreglo de índices: [${tablero.join(', ')}]`;
 }
 
-// --- EJECUCIÓN ---
-if (resolverNReinas(0)) {
-    dibujarTableroEnPantalla();
-} else {
-    document.getElementById('tablero-html').textContent = `No se encontró solución para N = ${N}`;
-}
+// 3. CONTROLADORES DE EVENTOS (Botones + y -)
+btnMas.addEventListener('click', () => {
+    if (N < 12) { // Limite prudente para no colgar el navegador
+        N++;
+        valorNEl.textContent = N;
+        ejecutarYDibujar();
+    }
+});
+
+btnMenos.addEventListener('click', () => {
+    if (N > 4) { // 4 es el mínimo con solución real interactiva
+        N--;
+        valorNEl.textContent = N;
+        ejecutarYDibujar();
+    }
+});
+
+btnResolver.addEventListener('click', () => {
+    ejecutarYDibujar();
+});
+
+// Lanzamiento inicial automático al cargar la página
+ejecutarYDibujar();

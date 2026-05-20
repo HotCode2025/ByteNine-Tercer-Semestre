@@ -3,17 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Problema de las N-Reinas</title>
+    <title>Reto de las N-Reinas - Panel Avanzado</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <h2>Solución al Problema de las N-Reinas</h2>
-        
-        <div id="tablero-html"></div>
-        
-        <div id="arreglo-texto"></div>
+    <div class="dashboard">
+        <header class="main-header">
+            <h1> EL RETO DE LAS N-REINAS</h1>
+        </header>
+
+        <section class="controls-section">
+            <span class="control-label">AJUSTE DE NIVEL</span>
+            <div class="counter-container">
+                <button id="btn-menos" class="btn-control">-</button>
+                <span id="valor-n">8</span>
+                <button id="btn-mas" class="btn-control">+</button>
+            </div>
+            <button id="btn-resolver" class="btn-action">RESOLVER</button>
+        </section>
+
+        <main class="workspace">
+            <div class="board-wrapper">
+                <div id="tablero-html"></div>
+            </div>
+
+            <aside class="info-panel">
+                <div class="card">
+                    <h3>DATOS DE INVESTIGACIÓN</h3>
+                    <div id="arreglo-texto" class="code-box">[0, 0, 0, 0, 0, 0, 0, 0]</div>
+                </div>
+                <div class="card mini-card">
+                    <span>MÉTODO DE BÚSQUEDA:</span>
+                    <strong>BACKTRACKING</strong>
+                </div>
+                <div class="card mini-card">
+                    <span>ESTADO:</span>
+                    <strong id="estado-texto" style="color: #4ecca3;">RESOLVIBLE</strong>
+                </div>
+            </aside>
+        </main>
     </div>
 
     <script src="script.js"></script>
