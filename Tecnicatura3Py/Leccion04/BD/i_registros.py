@@ -1,0 +1,18 @@
+import psycopg2 #Esto es para poder conectarnos a Postgre
+
+conexion = psycopg2.connect(user="admin", password="admin", host="127.0.0.1", port="5432", database="test_db")
+try:
+    with conexion:
+        with conexion.cursor() as cursor:
+            sentencia = 'INSERT INTO persona (nombre, apellido, email)VALUES (%s, %s, %s )' # Placeholder
+            valores = ('Carlos', 'Lara', 'clara@mail.com') # Esto es una Tupla.
+            cursor.execute(sentencia, valores) #De esta manera ejecutamso la sentencia
+            #conexion.commit()# No lo utilizamos para guardar cambios en la base de datos porque el whith lo hace automaticamente
+            registros_insertados = cursor.rowcount
+            print(f'Los registros insertadaos son: {registros_insertados}')
+
+
+except Exception as e:
+    print(f'Ocurrió un error: {e}')
+finally:
+    conexion.close()
