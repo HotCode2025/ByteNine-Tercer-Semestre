@@ -193,7 +193,6 @@ Este listado detalla los puntos específicos cubiertos y desarrollados en cada c
  
 ## CLASE 3: Proyecto Catálogo de Películas
 **Fecha:** Lunes, 20 de abril de 2026  
-**Clase en Vivo:** [YouTube](#)
  
 > **Proyecto integrador:** Crear el proyecto con Diagrama de clase UML. Fecha de entrega: antes de las 23:00 hs del mismo día (entrega hasta las 00:00 hs del miércoles con nota reducida).
  
@@ -261,7 +260,6 @@ Este listado detalla los puntos específicos cubiertos y desarrollados en cada c
  
 ## CLASE 7-B: Capa de Datos - Logging y PostgreSQL Parte 2
 **Fecha:** Lunes, 18 de mayo de 2026  
-**Clase en Vivo:** [YouTube](#)
  
 - 8.1 Creación de la Clase `Persona`
 - 8.2 Prueba de la Clase `Persona`
