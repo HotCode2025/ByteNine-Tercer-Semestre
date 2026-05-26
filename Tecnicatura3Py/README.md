@@ -160,7 +160,6 @@ Este listado detalla los puntos específicos cubiertos y desarrollados en cada c
  
 ## CLASE 1: Excepciones
 **Fecha:** Lunes, 6 de abril de 2026  
-**Clase en Vivo:** [YouTube](https://www.youtube.com/live/aDHPE9bVnDg)
  
 ### Jerarquía de Excepciones en Python
  
@@ -177,7 +176,6 @@ Este listado detalla los puntos específicos cubiertos y desarrollados en cada c
  
 ## CLASE 2: Manejo de Archivos
 **Fecha:** Lunes, 13 de abril de 2026  
-**Clase en Vivo:** [YouTube](https://www.youtube.com/live/fbcbFGfro1c)
  
 > En Python podemos manejar archivos de tipo texto (`.txt`) y archivos binarios (fotos, audio, video, etc.). En esta clase se trabaja con archivos de tipo texto.
  
@@ -215,7 +213,6 @@ Este listado detalla los puntos específicos cubiertos y desarrollados en cada c
  
 ## CLASE 4: PostgreSQL y Python
 **Fecha:** Lunes, 27 de abril de 2026  
-**Clase en Vivo:** [YouTube](https://www.youtube.com/live/-LCzSuwyQLA)
  
 - 1.1 Instalación de PostgreSQL en Windows (investigar instalación en otros sistemas operativos)
 - 1.2 Creación de una base de datos llamada `prueba_bd` y carga de una tabla con sus columnas
@@ -230,7 +227,6 @@ Este listado detalla los puntos específicos cubiertos y desarrollados en cada c
  
 ## CLASE 5: Registros con PostgreSQL y Python
 **Fecha:** Lunes, 4 de mayo de 2026  
-**Clase en Vivo:** [YouTube](https://www.youtube.com/live/7784SfFnPdI)
  
 - 5.1 Uso de `with` y `psycopg2`
 - 5.2 Función `fetchone` en psycopg2
@@ -245,7 +241,6 @@ Este listado detalla los puntos específicos cubiertos y desarrollados en cada c
  
 ## CLASE 6: Transacciones en PostgreSQL y Python
 **Fecha:** Lunes, 11 de mayo de 2026  
-**Clase en Vivo:** [YouTube](https://www.youtube.com/live/3KDMYpf91wE)
  
 - 6.1 Corrección de mensajes de error en Postgres Parte 1 y Parte 2
 - 6.2 Manejo de transacciones (Manualmente) Parte 1, 2, 3 y 4
@@ -255,7 +250,6 @@ Este listado detalla los puntos específicos cubiertos y desarrollados en cada c
  
 ## CLASE 7-A: Capa de Datos - Logging y PostgreSQL Parte 1
 **Fecha:** Lunes, 18 de mayo de 2026  
-**Clase en Vivo:** [YouTube](https://www.youtube.com/live/Yx0VQvCb1JU)
  
 - 7.1 Explicación con el Diagrama de clase UML
   > **Tarea:** Realizar el diagrama UML correspondiente.
@@ -289,7 +283,6 @@ Este listado detalla los puntos específicos cubiertos y desarrollados en cada c
  
 ## 📝 NOTAS FINALES
  
-* **Clases en Vivo:** Todas las clases quedan grabadas en el canal de YouTube del curso.
 * **Consultas:** Utilizar el tablero de Issues de GitHub para dudas o problemas técnicos.
 * **Colaboración:** Respeta el flujo de trabajo secuencial y las ramas asignadas.
 ---
