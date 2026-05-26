@@ -164,7 +164,6 @@ Este listado detalla los puntos específicos cubiertos y desarrollados en cada c
  
 ### Jerarquía de Excepciones en Python
  
-![Diagrama jerarquía de excepciones](/assets/clase01_manejo_errores.png)
  
 > El diagrama muestra la jerarquía de clases de excepciones en Python, partiendo desde `BaseException` → `Exception`, y sus subclases más comunes: `ArithmeticError` (`ZeroDivisionError`), `OSError` (`FileNotFoundError`, `PermissionError`), `RuntimeError`, `LookupError` (`IndexError`, `KeyError`), y `SyntaxError` (`IndentationError`).
  
@@ -202,7 +201,7 @@ Este listado detalla los puntos específicos cubiertos y desarrollados en cada c
  
 ### Diagrama de Clases UML
  
-![Diagrama UML catálogo de películas](/assets/clase03_catalogo_peliculas.png)
+
  
 > El diagrama muestra dos paquetes: `dominio` con la clase `Pelicula` (atributo `-nombre: str`, método `+__str__()`) y `servicio` con la clase `CatalogoPeliculas` (atributo estático `+ruta_archivo: str`, métodos estáticos `agregar_pelicula()`, `listar_peliculas()` y `eliminar()`). Ambas clases se relacionan mediante `«agrega»`. El archivo `test_catalogo_peliculas.py` implementa un menú con 4 opciones: Agregar película, Listar películas, Eliminar archivo de películas y Salir.
  
@@ -261,7 +260,6 @@ Este listado detalla los puntos específicos cubiertos y desarrollados en cada c
 - 7.1 Explicación con el Diagrama de clase UML
   > **Tarea:** Realizar el diagrama UML correspondiente.
 
-  ![Diagrama UML acceso_datos](/assets/Clase07_diagrama_UML.png)
 - 7.2 Manejo de logging Parte 1
   > 📄 Referencia: [Documentación oficial de logging](https://docs.python.org/3/library/logging.html)
 - 7.3 Manejo de logging Parte 2
