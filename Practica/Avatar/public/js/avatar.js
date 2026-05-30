@@ -1,31 +1,36 @@
-
-function seleccionarPersonajeJugador() {
-
-  // Busca el radio button que esté marcado en este momento
-  const seleccionado = document.querySelector('input[name="personaje"]:checked');
-
-  // Si no eligió ninguno, mostramos un aviso y salimos
-  if (!seleccionado) {
-    alert('Por favor elegí un personaje primero');
-    return;
-  }
-
-  // Condicional: según el id del radio marcado, mostramos el personaje
-  if (seleccionado.id === 'zuko') {
-    alert('Elegiste a Zuko 🔥');
-
-  } else if (seleccionado.id === 'katara') {
-    alert('Elegiste a Katara 💧');
-
-  } else if (seleccionado.id === 'aang') {
-    alert('Elegiste a Aang 🌪️');
-
-  } else if (seleccionado.id === 'toph') {
-    alert('Elegiste a Toph 🌱');
-  }
-
+function iniciarJuego(){
+  let botonPersonajeJugador = document.getElementById('btn-personaje'); 
+  botonPersonajeJugador.addEventListener('click', seleccionarPersonajeJugador); // Escucha el click del botón y llama a la función
 }
 
-// Escucha el click del botón y llama a la función
-let botonPersonajeJugador = document.getElementById('btn-personaje');
-botonPersonajeJugador.addEventListener('click', seleccionarPersonajeJugador);
+function seleccionarPersonajeJugador() {
+  let inputZuko = document.getElementById('zuko')
+  let inputKatara = document.getElementById('katara')
+  let inputAang = document.getElementById('aang')
+  let inputToph = document.getElementById('toph')
+  let spanPersonajeJugador = document.getElementById('personaje-jugador')
+
+  if(inputZuko.checked){
+    spanPersonajeJugador.innerHTML = 'Zuko'
+  }else if(inputKatara.checked){
+    spanPersonajeJugador.innerHTML = 'Katara'
+  }else if(inputAang.checked){
+    spanPersonajeJugador.innerHTML = 'Aang'
+  }else if(inputToph.checked){
+    spanPersonajeJugador.innerHTML = 'Toph'
+  }else{
+    alert('Selecciona un personaje')
+  }
+
+  aleatoria() //Llamamos a la función que elije el personaje enemigo
+}
+
+function aleatoria() { //Función que elije aleatoriamente un personaje para el enemigo
+  let personajes = ['Zuko', 'Katara', 'Aang', 'Toph']
+  let numeroAleatorio = Math.floor(Math.random() * personajes.length)
+
+  let spanPersonajeEnemigo = document.getElementById('personaje-enemigo')
+  spanPersonajeEnemigo.innerHTML = personajes[numeroAleatorio]
+}
+
+window.addEventListener('load', iniciarJuego)
