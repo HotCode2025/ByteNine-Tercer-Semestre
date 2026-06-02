@@ -1,6 +1,7 @@
-from Tecnicatura3Py.Leccion04.BD.actualizar_registro import conexion
-from Tecnicatura3Py.Leccion07.capa_datos_personas.Persona import Persona
-from Tecnicatura3Py.Leccion07.capa_datos_personas.conexion import Conexion
+from Leccion04.BD.actualizar_registro import conexion
+from Persona import Persona
+from conexion import Conexion
+from logger_base import log
 
 
 class PersonaDAO:
@@ -27,3 +28,9 @@ class PersonaDAO:
                 for registro in registros:
                     persona = Persona(registro[0], registro[1], registro[2], registro[3])
                     personas.append(persona)
+                return personas
+
+if __name__ == '__main__':
+    personas = PersonaDAO.seleccionar()
+    for persona in personas:
+        log.debug(persona)
