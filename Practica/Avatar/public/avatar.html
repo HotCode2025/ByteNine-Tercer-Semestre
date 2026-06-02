@@ -1,59 +1,109 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">        
-        <title>LA LEYENDA DE AANG: AVATAR </title>        
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LA LEYENDA DE AANG: AVATAR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    </head>
-    <body>
-        <h1> AVATAR 🔥💧 🌱 🌪️</h1> <!-- Esto es estático, No cambia, el h1 se utiliza una vez -->
+    <h1>AVATAR: COMBATE ELEMENTAL 🔥💧🌱🌪️</h1>
 
-        <section id="selecionar-personaje">
-
-
-
-            <label for="zuko">Zuko</label> <!-- Esta etiqueta es para darle un indicador a los usuarios de que están seleccionando -->
-            <input type="radio" name="personaje" id="zuko" /> <!-- name es para agrupar todos los inputs y poder seleccionar--> 
-
-            <label for="katara">Katara</label> <!-- El atributo for ayuda a vincular un label con un input a traves del mismo id-->
-            <input type="radio" name="personaje" id="katara" /> <!-- Acá van los personajes -->
-
-            <label for="aang">Aang</label>  <!-- Le damos un atributo id para saber cua es el valor de cada uno -->
-            <input type="radio" name="personaje" id="aang" />   
-
-            <label for="toph">Toph</label>
-            <input type="radio" name="personaje" id="toph" />
-
-            <button id="btn-personaje">Seleccionar</button> <!-- El botón para seleccionar el personaje -->
-            
-        </section>
-
-        <section id="selecionar-ataque">
-                <h2>Elige tu Ataque</h2> <!-- Se puede utilizar varias veces -->
-                <p>Tu personaje <span id="personaje-jugador"></span> tiene <span>3</span> vidas </p> <!-- Pero esto debe ser dinamico, necesitamos que cambie-->
-                <p>El personaje <span id="personaje-enemigo"></span> del enemigo tiene <span>3</span> vidas </p> <!-- Con la etiqueta spam vamos a modificar el 3 con JS -->
-
-                <p>
-                    <button id="boton-fuego">Fuego🔥 </button>
-                    <button id="boton-agua">Agua💧 </button>
-                    <button id="boton-aire">Aire🌪️ </button>
-                    <button id="boton-tierra">Tierra🌱 </button>    
-                </p>
+    <section id="seccion-seleccionar">
+        <h2>Elige tu Maestro</h2>
+        <div class="contenedor-tarjetas">
     
-                <button id="btn-ataque">Atacar</button> <!-- El botón para atacar -->
-        </section>
+    <label class="tarjeta-personaje">
+        <input type="radio" name="personaje" id="zuko" />
+        <div class="info-avatar">
+            <img src="./imagenes/image.png" alt="Zuko" class="foto-seleccion">
+            <h3>Zuko</h3>
+            <p>Maestro Fuego</p>
+        </div>
+    </label>
 
-        <section id="mensajes"> <!-- Será un párrafo dinamico-->
-            <p> Tu personaje atacó con todo el poder del FUEGO, el personaje del enemigo atacó co el medio poder de la TIERRA - GANASTE 🏆 </p>
-        </section>
+    <label class="tarjeta-personaje">
+        <input type="radio" name="personaje" id="katara" />
+        <div class="info-avatar">
+            <img src="./imagenes/Katara.jpg" alt="Katara" class="foto-seleccion">
+            <h3>Katara</h3>
+            <p>Maestra Agua</p>
+        </div>
+    </label>
 
-        <section id="reiniciar">
-            <button id="btn-reiniciar">Reiniciar</button> <!-- El botón para reiniciar el juego -->
+    <label class="tarjeta-personaje">
+        <input type="radio" name="personaje" id="aang" />
+        <div class="info-avatar">
+            <img src="./imagenes/Ang.jpg" alt="Aang" class="foto-seleccion">
+            <h3>Aang</h3>
+            <p>Avatar (Aire)</p>
+        </div>
+    </label>
 
-        <script src="./js/avatar.js"></script> <!-- El script para manejar la lógica del juego --> 
+    <label class="tarjeta-personaje">
+        <input type="radio" name="personaje" id="toph" />
+        <div class="info-avatar">
+            <img src="./imagenes/toph.jpg" alt="Toph" class="foto-seleccion">
+            <h3>Toph</h3>
+            <p>Maestra Tierra</p>
+        </div>
+    </label>
+
+</div>
+</div> <button id="btn-personaje" class="btn-principal">Confirmar Selección</button>
         
-    </body>
-</html>
+    </section>
 
+
+    <section id="seccion-combate" class="oculto">
+        <h2>Arena de Elementos</h2>
+        
+        <div class="campo-batalla">
+            <div id="visual-jugador" class="render-personaje">
+                <span id="emoji-jugador" class="sprite"></span>
+                <h3 id="nombre-jugador-pantalla">Jugador</h3>
+                <div class="barra-vida"><div id="barra-j" class="vida-interior"></div></div>
+                <p>Vidas: <span id="vidas-jugador">3</span>/3</p>
+            </div>
+
+            <div class="vs">VS</div>
+
+            <div id="visual-enemigo" class="render-personaje">
+                <span id="emoji-enemigo" class="sprite"></span>
+                <h3 id="nombre-enemigo-pantalla">Enemigo</h3>
+                <div class="barra-vida"><div id="barra-e" class="vida-interior"></div></div>
+                <p>Vidas: <span id="vidas-enemigo">3</span>/3</p>
+            </div>
+        </div>
+
+        <div class="botones-ataque">
+    <button id="btn-llamas" class="btn-ataque fuego oculto">Llamas de Fuego 🔥</button>
+    <button id="btn-explosion" class="btn-ataque fuego oculto">Explosión 💥</button>
+
+    <button id="btn-tsunami" class="btn-ataque agua oculto">Tsunami 🌊</button>
+    <button id="btn-tormenta" class="btn-ataque agua oculto">Tormenta ⛈️</button>
+
+    <button id="btn-tornado" class="btn-ataque aire oculto">Tornado 🌪️</button>
+    <button id="btn-huracan" class="btn-ataque aire oculto">Huracán 💨</button>
+
+    <button id="btn-terremoto" class="btn-ataque tierra oculto">Terremoto 🌋</button>
+    <button id="btn-meteoritos" class="btn-ataque tierra oculto">Meteoritos ☄️</button>
+</div>
+    </section>
+
+    <section id="seccion-mensajes" class="oculto">
+        <div class="consola-combate">
+            <p id="texto-resultado">¡La batalla ha comenzado!</p>
+        </div>
+    </section>
+
+    <section id="seccion-reiniciar" class="oculto">
+        <button id="btn-reiniciar" class="btn-principal reiniciar">Volver a Jugar 🔄</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
 
