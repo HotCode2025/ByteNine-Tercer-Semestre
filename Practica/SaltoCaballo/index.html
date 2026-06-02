@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salto del Caballo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>♞ El Salto del Caballo</h1>
+  <p>Algoritmo de backtracking - tablero 8x8</p>
+
+  <div id="estado">Presiona Iniciar para empezar.</div>
+
+  <div id="tablero"></div>
+
+  <div class="controles">
+    <button id="btn-iniciar" onclick="iniciar()">▶ Iniciar</button>
+    <button id="btn-parar" onclick="parar()" disabled>⏸ Pausar</button>
+    <button onclick="reiniciar()">↺ Reiniciar</button>
+  </div>
+
+  <div class="velocidad-wrap">
+    <label>
+      Velocidad:
+      <input type="range" id="velocidad" min="50" max="800" value="300" step="50">
+      (menos = mas rapido)
+    </label>
+  </div>
+
+  <script src="SaltoCaballo.js"></script>
+</body>
+</html>
