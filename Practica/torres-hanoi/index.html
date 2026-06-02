@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Torres de Hanoi</title>
+  <link rel="stylesheet" href="style.css"> <!-- Incluimos el archivo de estilos CSS -->
+</head>
+<body>
+
+  <h1>Torres de Hanoi</h1> <!-- Título de la página -->
+
+  <div class="controles">
+    <!-- Selección del número de discos -->
+    <label>Discos:</label>
+    <!-- Opciones para seleccionar el número de discos -->
+    <select id="num-discos">
+      <option value="2">2</option> <!-- Opción para 2 discos -->
+      <option value="3" selected>3</option> <!-- Opción para 3 discos -->
+      <option value="4">4</option> <!-- Opción para 4 discos -->
+      <option value="5">5</option> <!-- Opción para 5 discos -->
+    </select>
+    <button id="btn-iniciar">Iniciar</button> <!-- Botón para iniciar el juego -->
+    <button id="btn-siguiente" disabled>Siguiente paso</button> <!-- Botón para realizar el siguiente movimiento, inicialmente deshabilitado -->
+  </div>
+<!-- Información para el usuario -->
+  <p id="info">Presioná Iniciar para comenzar.</p>
+
+  <div id="tablero"></div>
+<!-- Incluimos el script de JavaScript -->
+  <script src="hanoi.js"></script>
+</body>
+</html>

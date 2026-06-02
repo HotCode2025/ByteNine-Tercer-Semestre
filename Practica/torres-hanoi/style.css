@@ -1,0 +1,70 @@
+/* Estilos para el juego de la Torre de Hanoi */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+/* Contenedor para los controles */
+.controles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+/* Estilo básico para los botones */
+button {
+  padding: 8px 16px;
+  border: 1px solid #999;
+  border-radius: 6px;
+  cursor: pointer;
+  background: white;
+}
+/* Botones deshabilitados se ven atenuados */
+button:disabled {
+  opacity: 0.4;
+}
+
+/* Información del juego */
+#info {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Las tres varillas en fila */
+#tablero {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Cada varilla apila los discos de abajo hacia arriba */
+.varilla {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  background-color: #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  min-height: 180px;
+  min-width: 160px;
+}
+/* Cada varilla */
+.varilla p {
+  font-weight: bold;
+  margin: 0;
+  order: 999;
+}
+
+/* Cada disco */
+.disco {
+  height: 24px;
+  border-radius: 12px;
+  color: white;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2px 0;
+}
