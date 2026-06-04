@@ -17,7 +17,7 @@
     <label class="tarjeta-personaje">
         <input type="radio" name="personaje" id="zuko" />
         <div class="info-avatar">
-            <img src="./imagenes/image.png" alt="Zuko" class="foto-seleccion">
+            <img src="./imagenes/Zuko.jpg" alt="Zuko" class="foto-seleccion">
             <h3>Zuko</h3>
             <p>Maestro Fuego</p>
         </div>
@@ -52,6 +52,7 @@
 
 </div>
 </div> <button id="btn-personaje" class="btn-principal">Confirmar Selección</button>
+       <button id="show-rules" class="rules-btn">Reglas</button>
         
     </section>
 
@@ -90,6 +91,8 @@
     <button id="btn-terremoto" class="btn-ataque tierra oculto">Terremoto 🌋</button>
     <button id="btn-meteoritos" class="btn-ataque tierra oculto">Meteoritos ☄️</button>
 </div>
+
+        <button id="show-rules-combat" class="rules-btn rules-btn-combate">Reglas</button>
     </section>
 
     <section id="seccion-mensajes" class="oculto">
@@ -101,6 +104,25 @@
     <section id="seccion-reiniciar" class="oculto">
         <button id="btn-reiniciar" class="btn-principal reiniciar">Volver a Jugar 🔄</button>
     </section>
+
+    <!-- Modal de Reglas -->
+    <div id="modal-reglas" class="modal-reglas">
+        <div class="contenido-reglas">
+            <h2>📋 Reglas del Juego</h2>
+            <ol>
+                <li>Debes seleccionar 1 de los 4 personajes que se muestran y hacer click en el botón <strong>CONFIRMAR SELECCIÓN</strong>.</li>
+                <li>Se te dará la posibilidad de elegir entre tres ataques por personaje: <strong>PUÑO</strong>, <strong>PATADA</strong> y <strong>BARRIDA</strong>.</li>
+                <li>Tú y tu contrincante tendrán <strong>3 vidas</strong> respectivamente. El primero en perder todas sus vidas pierde el combate.</li>
+            </ol>
+            <div class="info-util">
+                <h3>⚡ Información Útil:</h3>
+                <p><strong>PUÑO</strong> gana a BARRIDA</p>
+                <p><strong>PATADA</strong> gana a PUÑO</p>
+                <p><strong>BARRIDA</strong> gana a PATADA</p>
+            </div>
+            <button class="btn-cerrar-reglas" id="btn-cerrar-reglas">Cerrar</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

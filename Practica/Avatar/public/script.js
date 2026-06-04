@@ -55,6 +55,32 @@ document.getElementById('btn-meteoritos').addEventListener('click', () => proces
 btnPersonaje.addEventListener('click', seleccionarPersonajeJugador);
 btnReiniciar.addEventListener('click', () => location.reload());
 
+// 3.5 GESTIÓN DEL MODAL DE REGLAS
+const showRulesBtn = document.getElementById('show-rules');
+const modalReglas = document.getElementById('modal-reglas');
+const btnCerrarReglas = document.getElementById('btn-cerrar-reglas');
+
+showRulesBtn.addEventListener('click', () => {
+    modalReglas.classList.add('activo');
+});
+
+// Botón de reglas durante el combate
+const showRulesCombatBtn = document.getElementById('show-rules-combat');
+showRulesCombatBtn.addEventListener('click', () => {
+    modalReglas.classList.add('activo');
+});
+
+btnCerrarReglas.addEventListener('click', () => {
+    modalReglas.classList.remove('activo');
+});
+
+// Cerrar modal al hacer click fuera del contenido
+modalReglas.addEventListener('click', (e) => {
+    if (e.target === modalReglas) {
+        modalReglas.classList.remove('activo');
+    }
+});
+
 // 3. SELECCIÓN DE PERSONAJES
 function seleccionarPersonajeJugador() {
     const opciones = document.getElementsByName('personaje');
@@ -122,7 +148,6 @@ function prepararPantallaArena() {
 
     // Llamamos a la nueva función que configura tus ataques exclusivos
     configurarBotonesDeAtaque();
-
 
     // Ocultamos todos los botones de ataque primero
     document.getElementById('boton-fuego').classList.add('oculto');
