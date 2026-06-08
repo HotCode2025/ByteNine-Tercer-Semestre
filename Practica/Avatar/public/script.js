@@ -22,13 +22,12 @@ let enemigo;
 
 // Matriz de Ventajas e Inmunidades Elementales
 // "Clave" le gana a "Valor"
+// Nueva lógica de combate: Clave le gana a Valor
 const ventajas = {
-    fuego: "aire",   // El fuego consume el aire
-    aire: "tierra",  // El aire erosiona la tierra
-    tierra: "agua",  // La tierra absorbe el agua
-    agua: "fuego"    // El agua apaga el fuego
+    patada: "puño",   // La patada tiene más alcance que el puño
+    puño: "barrida",   // El puño interrumpe la agachada de la barrida
+    barrida: "patada"  // La barrida derriba al que tira una patada alta
 };
-
 // 2. CONFIGURACIÓN INICIAL DEL DOM
 const seccionSeleccionar = document.getElementById('seccion-seleccionar');
 const seccionCombate = document.getElementById('seccion-combate');
@@ -40,17 +39,9 @@ const btnReiniciar = document.getElementById('btn-reiniciar');
 const textoResultado = document.getElementById('texto-resultado');
 
 // Botones de ataque
-document.getElementById('btn-llamas').addEventListener('click', () => procesarTurno('fuego', 'Llamas de Fuego'));
-document.getElementById('btn-explosion').addEventListener('click', () => procesarTurno('fuego', 'Explosión'));
-
-document.getElementById('btn-tsunami').addEventListener('click', () => procesarTurno('agua', 'Tsunami'));
-document.getElementById('btn-tormenta').addEventListener('click', () => procesarTurno('agua', 'Tormenta'));
-
-document.getElementById('btn-tornado').addEventListener('click', () => procesarTurno('aire', 'Tornado'));
-document.getElementById('btn-huracan').addEventListener('click', () => procesarTurno('aire', 'Huracán'));
-
-document.getElementById('btn-terremoto').addEventListener('click', () => procesarTurno('tierra', 'Terremoto'));
-document.getElementById('btn-meteoritos').addEventListener('click', () => procesarTurno('tierra', 'Meteoritos'));
+document.getElementById('btn-puño').addEventListener('click', () => procesarTurno('puño'));
+document.getElementById('btn-patada').addEventListener('click', () => procesarTurno('patada'));
+document.getElementById('btn-barrida').addEventListener('click', () => procesarTurno('barrida'));
 
 btnPersonaje.addEventListener('click', seleccionarPersonajeJugador);
 btnReiniciar.addEventListener('click', () => location.reload());
@@ -164,23 +155,14 @@ function prepararPantallaArena() {
 
 // 4. LÓGICA DE COMBATE CON VENTAJAS Y ANIMACIONES
 // Actualizamos la función para recibir el elemento y el nombre del ataque del jugador
-function procesarTurno(elementoJugador, nombreAtaqueJugador) {
+function procesarTurno(ataqueJugador) {
     if (jugador.vidas <= 0 || enemigo.vidas <= 0) return;
 
-    // Diccionario para que la máquina elija un ataque con nombre real según su elemento asignado
-    const ataquesEnemigoPorElemento = {
-        fuego: ['Llamas de Fuego', 'Explosión'],
-        agua: ['Tsunami', 'Tormenta'],
-        aire: ['Tornado', 'Huracán'],
-        tierra: ['Terremoto', 'Meteoritos']
-    };
+    // La máquina elige al azar uno de los 3 movimientos de combate
+    const movimientos = ['puño', 'patada', 'barrida'];
+    const ataqueEnemigo = movimientos[Math.floor(Math.random() * movimientos.length)];
 
-    // La máquina elige al azar uno de SUS dos ataques exclusivos
-    const listaAtaquesRival = ataquesEnemigoPorElemento[enemigo.elemento];
-    const nombreAtaqueEnemigo = listaAtaquesRival[Math.floor(Math.random() * listaAtaquesRival.length)];
-    const elementoEnemigo = enemigo.elemento;
-
-    // --- (Aquí se mantiene igual tu código de animaciones de las tarjetas) ---
+    // Animaciones visuales de las tarjetas (Se mantienen)
     const cardJ = document.getElementById('visual-jugador');
     const cardE = document.getElementById('visual-enemigo');
     cardJ.classList.add('ataque-jugador');
@@ -189,25 +171,24 @@ function procesarTurno(elementoJugador, nombreAtaqueJugador) {
         cardJ.classList.remove('ataque-jugador');
         cardE.classList.remove('ataque-enemigo');
     }, 200);
-    // -------------------------------------------------------------------------
 
-    // Resolución del combate utilizando las reglas lógicas de ventajas
-    if (elementoJugador === elementoEnemigo) {
-        textoResultado.innerHTML = `Utilizaste <strong>${nombreAtaqueJugador}</strong>. <br>El rival respondió con <strong>${nombreAtaqueEnemigo}</strong>. <br>💥 ¡Empate de elementos idénticos! Nadie sufre daño.`;
+    // Resolución del Choque de Golpes
+    if (ataqueJugador === ataqueEnemigo) {
+        textoResultado.innerHTML = `Lanzaste <strong>${ataqueJugador.toUpperCase()}</strong>. <br>El rival bloqueó con <strong>${ataqueEnemigo.toUpperCase()}</strong>. <br>💥 ¡Fuerzas niveladas! Choque de guardias.`;
     } 
-    else if (ventajas[elementoJugador] === elementoEnemigo) {
+    else if (ventajas[ataqueJugador] === ataqueEnemigo) {
         enemigo.vidas--;
         cardE.classList.add('recibir-daño');
         setTimeout(() => cardE.classList.remove('recibir-daño'), 400);
         
-        textoResultado.innerHTML = `¡Tu <strong>${nombreAtaqueJugador}</strong> superó al ataque <strong>${nombreAtaqueEnemigo}</strong> del enemigo! <br>🏆 ¡Impacto certero! El rival pierde una vida.`;
+        textoResultado.innerHTML = `¡Tu <strong>${ataqueJugador.toUpperCase()}</strong> conectó con éxito contra la <strong>${ataqueEnemigo.toUpperCase()}</strong> del rival! <br>🏆 ¡Impacto limpio! Dañas al enemigo.`;
     } 
     else {
         jugador.vidas--;
         cardJ.classList.add('recibir-daño');
         setTimeout(() => cardJ.classList.remove('recibir-daño'), 400);
 
-        textoResultado.innerHTML = `Tu <strong>${nombreAtaqueJugador}</strong> fue neutralizado por el ataque <strong>${nombreAtaqueEnemigo}</strong> del enemigo. <br>💀 ¡Te han golpeado! Pierdes una vida.`;
+        textoResultado.innerHTML = `Tu <strong>${ataqueJugador.toUpperCase()}</strong> fue anticipado por la <strong>${ataqueEnemigo.toUpperCase()}</strong> del rival. <br>💀 ¡Te han contragolpeado! Pierdes una vida.`;
     }
 
     actualizarInterfazVidas();
