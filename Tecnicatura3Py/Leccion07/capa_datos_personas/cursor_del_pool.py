@@ -2,7 +2,7 @@ from logger_base import log
 from conexion import Conexion
 
 
-class CursoDelPool:
+class CursorDelPool:
     def __init__(self):
         self._conexion = None
         self._cursor = None
@@ -23,3 +23,9 @@ class CursoDelPool:
             log.debug('Commit de la transacción')
         self._cursor.close()
         Conexion.liberarConexion(self._conexion)
+
+if __name__ == '__main__':
+    with CursorDelPool() as cursor:
+        log.debug('Dentro del bloque with')
+        cursor.execute('SELECT + FROM persona')
+        log.debug(cursor.fetchall())
