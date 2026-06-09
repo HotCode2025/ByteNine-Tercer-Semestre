@@ -316,3 +316,17 @@ h1 {
     transform: translateY(-50%) !important;
     z-index: 500 !important;
 }
+.foto-seleccion {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.foto-render {
+    width: 100%;
+    max-width: 120px; /* Ajusta el tamaño a tu gusto */
+    height: 110px;
+    border-radius: 8px;
+    object-fit: cover;
+}

@@ -11,7 +11,7 @@ class Avatar {
 
 // Actualizamos el catálogo con las rutas de tus imágenes locales
 const personajesDisponibles = {
-    zuko: new Avatar("Zuko", "./imagenes/image.png", "fuego"),
+    zuko: new Avatar("Zuko", "./imagenes/Zuko.jpg", "fuego"),
     katara: new Avatar("Katara", "./imagenes/Katara.jpg", "agua"),
     aang: new Avatar("Aang", "./imagenes/Ang.jpg", "aire"),
     toph: new Avatar("Toph", "./imagenes/toph.jpg", "tierra")
@@ -146,11 +146,7 @@ function prepararPantallaArena() {
     document.getElementById('boton-aire').classList.add('oculto');
     document.getElementById('boton-tierra').classList.add('oculto');
 
-    // Mostramos ÚNICAMENTE el botón que coincide con el elemento del jugador
-    if (jugador.elemento === 'fuego') document.getElementById('boton-fuego').classList.remove('oculto');
-    if (jugador.elemento === 'agua') document.getElementById('boton-agua').classList.remove('oculto');
-    if (jugador.elemento === 'aire') document.getElementById('boton-aire').classList.remove('oculto');
-    if (jugador.elemento === 'tierra') document.getElementById('boton-tierra').classList.remove('oculto');
+    
 }
 
 // 4. LÓGICA DE COMBATE CON VENTAJAS Y ANIMACIONES
