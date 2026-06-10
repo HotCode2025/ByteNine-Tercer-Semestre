@@ -69,6 +69,7 @@ h1 {
     gap: 40px;
     margin: 30px auto;
     max-width: 700px;
+    flex-wrap: wrap;
 }
 
 .render-personaje {
@@ -122,7 +123,10 @@ h1 {
     padding: 20px;
     border-radius: 12px;
     max-width: 500px;
-    margin: 20px auto;
+    margin: auto;
+    width: 100%;
+    flex: 1 1 100%;
+    text-align: center;
 }
 
 .botones-ataque { display: flex; justify-content: center; gap: 10px; }
@@ -167,11 +171,13 @@ h1 {
 }
 
 .foto-render {
-    width: 100%;
-    max-width: 120px; /* Ajusta el tamaño a tu gusto */
-    height: auto;
+    width: 120px;
+    max-width: 120px;
+    height: 160px;
     border-radius: 8px;
     object-fit: cover;
+    display: block;
+    margin: 0 auto;
 }
 .foto-seleccion {
      width: 200%;
@@ -315,18 +321,4 @@ h1 {
     top: 50% !important;
     transform: translateY(-50%) !important;
     z-index: 500 !important;
-}
-.foto-seleccion {
-    width: 100%;
-    height: 110px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-.foto-render {
-    width: 100%;
-    max-width: 120px; /* Ajusta el tamaño a tu gusto */
-    height: 110px;
-    border-radius: 8px;
-    object-fit: cover;
 }
