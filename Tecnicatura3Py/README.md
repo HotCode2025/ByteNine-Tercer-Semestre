@@ -1,12 +1,17 @@
-# PROGRAMACION EN PYTHON: ByteNine-Tercer-Semestre
  
-Este repositorio es parte de la organización **HotCode-2025** y fue creado por el equipo **ByteNine**. Su propósito es almacenar los ejercicios y proyectos del Lenguaje **Python**, diseñados para ser trabajados en el IDE **PyCharm Community Edition** o **Visual Studio Code**, gestionados con **virtualenv** y **Python 3.13**.
- 
+# 🐍 PROGRAMACIÓN EN PYTHON - ByteNine Tercer Semestre
+---
+<p align="left">
+  <img src="https://img.shields.io/badge/Python-3.13-blue?style=for-the-badge&logo=python" alt="Python Version">
+  <img src="https://img.shields.io/badge/IDE-PyCharm-black?style=for-the-badge&logo=pycharm" alt="PyCharm">
+  <img src="https://img.shields.io/badge/Database-PostgreSQL-336791?style=for-the-badge&logo=postgresql" alt="PostgreSQL">
+</p>
+
 ---
 ## 👥 Integrantes del Equipo
-
+ 
 La siguiente lista contiene los perfiles de GitHub de los desarrolladores:
-
+ 
 *  [Agustin Santarena](https://github.com/AgusSantarena)
 *  [Gabriel Santarena](https://github.com/GabrielSantarena)
 *  [Santiago Martin](https://github.com/santy171004)
@@ -27,113 +32,6 @@ La siguiente tabla resume las herramientas obligatorias para el desarrollo y la 
  
 ---
  
-### REGLA CLAVE: Entorno Virtual (virtualenv)
- 
-Para mantener la consistencia entre colaboradores y evitar conflictos de dependencias, es fundamental trabajar con un entorno virtual.
- 
-| Elemento | Descripción | ¿DEBE Subirse (Commit/Push)? | ¿Por qué? |
-| :--- | :--- | :--- | :--- |
-| **`venv/`** | Entorno virtual de Python | **NO** | Está ignorado por `.gitignore`. Cada colaborador crea su propio entorno. |
-| **`requirements.txt`** | Archivo de dependencias | **SÍ** | **Permite instalar las mismas librerías en todos los entornos.** |
-| **`__pycache__/`** | Archivos compilados de Python | **NO** | Está ignorado por `.gitignore` (archivos temporales). |
-| **`.idea/`** | Configuración de PyCharm | **NO** | Está ignorado por `.gitignore` (configuraciones personales). |
-| **Archivos `.py`** | Código fuente Python | **SÍ** | **El código debe estar disponible para todos.** |
- 
-**Advertencia:** Asegúrate de activar tu entorno virtual antes de trabajar. En Windows: `venv\Scripts\activate`, en Mac/Linux: `source venv/bin/activate`.
- 
----
- 
-## INSTRUCCIONES DE EJECUCIÓN
- 
-Para ejecutar correctamente los proyectos de Python, siga estos pasos:
- 
-1. **Requisitos:** Asegúrese de tener instalado **Python 3.13+** y **PyCharm** o **VSCode**.
-2. **Clonar:** Clone este repositorio.
-3. **Crear Entorno Virtual:**
-   ```bash
-   cd Python
-   python -m venv venv
-   ```
-4. **Activar Entorno Virtual:**
-   - Windows: `venv\Scripts\activate`
-   - Mac/Linux: `source venv/bin/activate`
-5. **Instalar Dependencias:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-6. **Abrir Proyecto:** En PyCharm, seleccione **`File > Open`** y navegue hasta la carpeta `/Python/`.
-7. **Ejecutar:** Abra cualquier archivo `.py` en la lección correspondiente (ejemplo: `/Python/Leccion1/`) y ejecute presionando **Shift+F10** (PyCharm) o el botón de play.
-   * Todo el código final está asegurado en la rama **`main`** para revisión.
----
- 
-## ⚠️ REGLAS FUNDAMENTALES PARA LA COLABORACIÓN
- 
-Herramientas Clave: PyCharm/VSCode y GitHub Desktop.
- 
-1. **Sincronización (Pull) Obligatoria:**
-   * **Siempre** haz clic en **"Fetch Origin"** y luego en **"Pull Origin"** en GitHub Desktop antes de comenzar cualquier tarea o escribir código.
-   * **Rama de Trabajo:** Asegúrate de estar en la rama **`Corrección-Repo`**.
-2. **Commit y Push Consistentes:**
-   * Una vez que finalices y pruebes tu tarea, escribe un mensaje descriptivo, haz **`Commit`** y luego **"Push Origin"** a la rama **`Corrección-Repo`**.
-3. **Gestión del `.gitignore` (Prohibido Modificar):**
-   * **Prohibido** modificar o eliminar entradas del archivo **`.gitignore`** sin consenso de todos los miembros del equipo ByteNine.
----
- 
-## 🛠️ FLUJO DE TRABAJO ESPECÍFICO PARA LENGUAJE PYTHON
- 
-### Flujo de Ramas y Roles
- 
-* **Rama de Desarrollo Activa:** **`Corrección-Repo`**. Toda la actividad de clases debe ocurrir únicamente aquí.
-* **Rama Principal (Estable):** **`main`**. Contiene solo código estable y final.
-* **Encargado de la Fusión a `main`:** **Solo el *Owner*** Agustín Santarena → Owner ([@AgusSantarena](https://github.com/AgusSantarena)) tiene permiso para fusionar (`merge`) los cambios de `Corrección-Repo` hacia la rama `main`.
-
-
-### Designación y Concurrencia de Actividades
- 
-El flujo es **secuencial** para evitar conflictos.
- 
-1. **Asignación de Tareas:**
-   * Las tareas se asignarán mediante un **sorteo**.
-   * **Prioridad:** El trabajo en clases (Ejercicios o Tareas) con **fecha de entrega el mismo día antes de las 23:00 hs.** es prioritario.
-2. **Gestión de la Concurrencia (Trabajo Secuencial):**
-   * **No iniciar, modificar o interrumpir** el trabajo de otro desarrollador.
-   * El flujo es estrictamente **secuencial**: Un desarrollador comienza y finaliza su tarea. **Solo después de la revisión y aprobación** se informará al siguiente compañero que puede comenzar.
-### Proceso de Revisión (GitHub Issues y Pull Requests)
- 
-1. **Registro y Asignación:** Usaremos el **tablero Scrum (Projects/Issues)** de GitHub.
-2. **Revisión de Código (Pull Request):** Al finalizar tu tarea, abre un **Pull Request** hacia la rama `Corrección-Repo`.
-3. **Aprobación/Rechazo:**
-   * El Revisor gestionará el desempeño.
-   * Si hay errores, el Revisor notificará al compañero desarrollador, quien deberá **corregir el error**, subir los nuevos cambios y solicitar una nueva revisión.
----
- 
-## 🏗️ ESTRUCTURA DEL REPOSITORIO Y CONVENCIONES
- 
-La estructura del proyecto es clave para la organización de las lecciones.
- 
-### Estructura de Carpetas
- 
-La estructura debe seguir este patrón a partir de la carpeta raíz del repositorio:
- 
-```
-/ByteNine-Tercer-Semestre
-└── /Python
-    ├── venv/                          # NO subir (ignorado)
-    ├── requirements.txt               # SÍ subir
-    └── /Leccion[Número]              # Carpeta de cada lección
-        ├── archivo_ejercicio_01.py
-        ├── archivo_ejercicio_02.py
-        └── README.md (opcional)
-```
- 
-### Contenido por Lección (Convenciones de Nombres)
- 
-Se debe respetar la convención de nombres (la creación será rotativa).
- 
-* **Carpeta de Lección:** `Leccion[Número]` (ejemplo: `Leccion1`, `Leccion2`).
-* **Nombre de Archivos:** Descriptivo y en minúsculas con guiones bajos (ejemplo: `manejo_excepciones_01.py`, `conexion_postgresql.py`).
-* **Clases y Funciones:** Seguir [PEP 8](https://pep8.org/) - Clases en `PascalCase`, funciones en `snake_case`.
----
  
 ## 📚 CONTENIDO DE LAS CLASES (Tabla de Temas)
  
@@ -149,6 +47,9 @@ La siguiente tabla resume el contenido cubierto en cada clase hasta la fecha (**
 | **6** | 11-05 | Transacciones en PostgreSQL y Python | Lección 6 |
 | **7A** | 18-05 | Capa de Datos: Logging y PostgreSQL Parte 1 | Lección 7 |
 | **7B** | 18-05 | Capa de Datos: Logging y PostgreSQL Parte 2 | Lección 7 |
+| **8** | 01-06 | Capa de Datos: PersonaDAO - método seleccionar | Lección 8 |
+| **9A** | 08-06 | Pool de conexiones con PostgreSQL Parte 1 | Lección 9 |
+| **9B** | 08-06 | Pool de conexiones con PostgreSQL Parte 2 | Lección 9 |
  
 ---
  
@@ -162,7 +63,6 @@ Este listado detalla los puntos específicos cubiertos y desarrollados en cada c
 **Fecha:** Lunes, 6 de abril de 2026  
  
 ### Jerarquía de Excepciones en Python
- 
  
 > El diagrama muestra la jerarquía de clases de excepciones en Python, partiendo desde `BaseException` → `Exception`, y sus subclases más comunes: `ArithmeticError` (`ZeroDivisionError`), `OSError` (`FileNotFoundError`, `PermissionError`), `RuntimeError`, `LookupError` (`IndexError`, `KeyError`), y `SyntaxError` (`IndentationError`).
  
@@ -182,10 +82,10 @@ Este listado detalla los puntos específicos cubiertos y desarrollados en cada c
 - 1.1 Introducción al manejo de archivos
 - 1.2 Especificar el juego de caracteres de un archivo de texto
 - 1.3 Lectura de archivos
-  ```python
+```python
   archivo = open('prueba.txt', 'r', encoding='utf8')
   print(archivo.read())
-  ```
+```
 - 1.4 Más formas de trabajar con archivos
 - 1.5 Uso de `with`, archivos y Context Manager Parte 1
 - 1.6 Uso de `with`, archivos y Context Manager Parte 2
@@ -194,11 +94,7 @@ Este listado detalla los puntos específicos cubiertos y desarrollados en cada c
 ## CLASE 3: Proyecto Catálogo de Películas
 **Fecha:** Lunes, 20 de abril de 2026  
  
-> **Proyecto integrador:** Crear el proyecto con Diagrama de clase UML. Fecha de entrega: antes de las 23:00 hs del mismo día (entrega hasta las 00:00 hs del miércoles con nota reducida).
- 
 ### Diagrama de Clases UML
- 
-
  
 > El diagrama muestra dos paquetes: `dominio` con la clase `Pelicula` (atributo `-nombre: str`, método `+__str__()`) y `servicio` con la clase `CatalogoPeliculas` (atributo estático `+ruta_archivo: str`, métodos estáticos `agregar_pelicula()`, `listar_peliculas()` y `eliminar()`). Ambas clases se relacionan mediante `«agrega»`. El archivo `test_catalogo_peliculas.py` implementa un menú con 4 opciones: Agregar película, Listar películas, Eliminar archivo de películas y Salir.
  
@@ -244,7 +140,7 @@ Este listado detalla los puntos específicos cubiertos y desarrollados en cada c
 - 6.1 Corrección de mensajes de error en Postgres Parte 1 y Parte 2
 - 6.2 Manejo de transacciones (Manualmente) Parte 1, 2, 3 y 4
 - 6.3 Manejo de transacciones con `with` (Automáticamente)
-- 📺 Video recomendado: [Ver video](https://www.youtube.com/watch?v=b8COygWdvmw)
+- 📺 Video recomendado: ["Crea una APP con PYTHON y CHATGPT desde cero"](https://www.youtube.com/watch?v=b8COygWdvmw)
 ---
  
 ## CLASE 7-A: Capa de Datos - Logging y PostgreSQL Parte 1
@@ -252,7 +148,6 @@ Este listado detalla los puntos específicos cubiertos y desarrollados en cada c
  
 - 7.1 Explicación con el Diagrama de clase UML
   > **Tarea:** Realizar el diagrama UML correspondiente.
-
 - 7.2 Manejo de logging Parte 1
   > 📄 Referencia: [Documentación oficial de logging](https://docs.python.org/3/library/logging.html)
 - 7.3 Manejo de logging Parte 2
@@ -266,7 +161,52 @@ Este listado detalla los puntos específicos cubiertos y desarrollados en cada c
 - 8.3 Creación de la Clase `Conexion` Parte 1, 2 y 3
 - 8.4 Comienzo de la creación de la Clase `PersonaDAO`
   > **Próxima clase:** Se incorporarán los métodos `SELECCIONAR`, `INSERTAR`, `ACTUALIZAR` y `ELIMINAR` a la clase `PersonaDAO`.
-- 📺 Video recomendado: [Ver video](https://www.youtube.com/watch?v=uMF7rcTKMHM)
+- 📺 Video recomendado: [CRUD con Django, en IDE Pycharm y Base de datos Postgress](https://www.youtube.com/watch?v=uMF7rcTKMHM)
+
+---
+ 
+## CLASE 8: Capa de Datos - PersonaDAO Parte 3
+**Fecha:** Lunes, 1 de junio de 2026
+ 
+### Diagrama: Paquete acceso_datos
+ 
+> El diagrama muestra el paquete `acceso_datos` con tres clases. La clase `Conexion` administra los datos de acceso a la base (`DATABASE`, `USERNAME`, `PASSWORD`, `DB_PORT`, `HOST`, `conexion`, `cursor`) y expone los métodos estáticos `obtenerConexion()`, `obtenerCursor()` y `cerrar()`. La clase `Persona` representa la entidad con atributos `id_persona`, `nombre`, `apellido` y `email`, junto con su método `__str__()` y los getters/setters correspondientes. Por último, `PersonaDAO` se compone de `Conexion` y opera sobre objetos `Persona`, definiendo los métodos `seleccionar()`, `insertar()`, `actualizar()` y `eliminar()`, encargados de realizar las operaciones sobre la base de datos para la entidad Persona.
+ 
+- 9.1 En la clase `PersonaDAO`: método `seleccionar`
+- 9.2 Prueba del método `seleccionar`
+- 9.3 Método `Insertar`
+- 9.4 Método `Actualizar`
+- 9.5 Método `Eliminar`
+- 9.6 Haciendo pruebas y eliminando errores
+---
+ 
+## CLASE 9-A: Pool de Conexiones con Python y PostgreSQL Parte 1
+**Fecha:** Lunes, 8 de junio de 2026, 18:00 hs
+ 
+### Diagrama: Pool de Conexiones
+ 
+> El diagrama ilustra el concepto de Connection Pool con Psycopg2: un conjunto fijo de conexiones (instancias de conexión) se mantiene disponible para ser repartido entre distintos clientes. Cuando un cliente solicita una conexión, el Pool le asigna una conexión libre; cuando el cliente termina, la conexión vuelve al Pool para ser reutilizada por otro cliente, evitando así abrir y cerrar conexiones contra PostgreSQL constantemente.
+ 
+- 10.1 Pool de conexiones con Python y PostgreSQL: Parte 1 y 2
+- 10.2 Obtener una conexión a partir del Pool: Parte 1 y 2
+- 10.3 Pruebas creando objetos del Pool de conexiones
+> 💡 *"Un programador se forma con la práctica."*
+> 📺 Video recomendado: [Curso Completo de C++ para Principiantes (2023)](https://www.youtube.com/watch?v=VQo6gj7-hw8)
+ 
+---
+ 
+## CLASE 9-B: Pool de Conexiones con Python y PostgreSQL Parte 2
+**Fecha:** Lunes, 8 de junio de 2026
+ 
+### Diagrama: Pool de Conexiones (continuación)
+ 
+> Se retoma el mismo diagrama del Pool de Conexiones de la clase anterior. En esta parte se completa la implementación: el método `liberarConexion()` es el encargado de devolver una conexión usada al Pool (como se ve en el diagrama, donde una conexión liberada queda disponible para el "Cliente #3"), mientras que `cerrarConexiones()` cierra todas las conexiones del Pool al finalizar. Además, se construye la clase `CursorDelPool`, que obtiene una conexión del Pool, ejecuta las operaciones mediante un cursor y, al terminar, libera automáticamente la conexión de vuelta hacia el Pool.
+ 
+- 11.1 Método `liberarConexion()`
+- 11.2 Método `cerrarConexiones()`
+- 11.3 Creamos la Clase `CursorDelPool` - Parte 1 y 2
+- 11.4 Pruebas del `CursorDelPool` - Parte 1 y 2
+- 11.5 Pruebas de `PersonaDAO` - Parte 1 y 2
 ---
  
 ## 🎯 CONSEJOS Y BUENAS PRÁCTICAS
@@ -285,8 +225,8 @@ Este listado detalla los puntos específicos cubiertos y desarrollados en cada c
 * **Colaboración:** Respeta el flujo de trabajo secuencial y las ramas asignadas.
 ---
  
-**Última actualización:** Mayo 2026  
-
+**Última actualización:** Junio 2026  
+ 
 ---
  
 ## 🔗 ENLACES ÚTILES
@@ -299,6 +239,4 @@ Este listado detalla los puntos específicos cubiertos y desarrollados en cada c
 * [Documentación de PostgreSQL](https://www.postgresql.org/docs/)
 * [Módulo logging de Python](https://docs.python.org/3/library/logging.html)
 ---
- 
-*Este README es un documento vivo y se actualizará conforme avance el curso.*
  
