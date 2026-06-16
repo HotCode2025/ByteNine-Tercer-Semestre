@@ -1,7 +1,7 @@
 let miPromesa = new Promise((resolver, rechazar) => {
     let expresion = true;
     if(expresion){
-        resolver('Resolvió correctamente');
+        //resolver('Resolvió correctamente');
     } else {
         rechazar('Se produjo un error');
     }
@@ -30,4 +30,15 @@ async function miFuncionConPromesa(){
     return 'Saludos con promesa y async';
 }
 
-miFuncionConPromesa().then(valor => console.log(valor));
+//miFuncionConPromesa().then(valor => console.log(valor));
+
+//async/await
+
+async function funcionConPromesaYAwait(){
+    let miPromesa = new Promise(resolver => {
+        resolver("Promesa con await");
+    })
+    console.log(await miPromesa)
+}
+
+funcionConPromesaYAwait();
