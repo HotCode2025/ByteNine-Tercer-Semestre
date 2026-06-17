@@ -35,11 +35,11 @@ public class ListadoPersonasAPP {
             System.out.print("Digite una de las opciones: ");
     }//Fin metodo mostrarMenu
 
-    private static boolean ejecutarOperacion(Scanner entrada, List<Persona> personas){
+    private static boolean ejecutarOperacion(Scanner entrada, List<Persona> personas) {
         var opcion = Integer.parseInt(entrada.nextLine());
         var salir = false;
         //Revisamos la opcion digital a traves de un switch
-        switch (opcion){
+        switch (opcion) {
             case 1 -> {//Agregar una persona a la lista
                 System.out.print("Digite el nombre: ");
                 var nombre = entrada.nextLine();
@@ -51,8 +51,13 @@ public class ListadoPersonasAPP {
                 var persona = new Persona(nombre, tel, email);
                 //Agregamos la persona a la lista
                 personas.add(persona);
-                System.out.println("La lista tiene: "+personas.size()+" elementos");
+                System.out.println("La lista tiene: " + personas.size() + " elementos");
             }//Fin caso 1
-        }
+            case 2 -> {// listar a las personas
+                System.out.println("Listado de personas: ");
+                //Mejoras con lambda y el metodo de referencia
+                //personas.forEach((persona) -> System.out.println(persona));
+                personas.forEach(System.out::println);}
+        }   //Fin caso 2
     }//Fin del metodo ejecutarOperacion
 }//Fin de la clase ListadoPersonasAPP
