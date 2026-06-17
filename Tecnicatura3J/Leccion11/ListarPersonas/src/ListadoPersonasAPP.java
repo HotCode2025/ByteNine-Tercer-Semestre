@@ -57,7 +57,15 @@ public class ListadoPersonasAPP {
                 System.out.println("Listado de personas: ");
                 //Mejoras con lambda y el metodo de referencia
                 //personas.forEach((persona) -> System.out.println(persona));
-                personas.forEach(System.out::println);}
-        }   //Fin caso 2
+                personas.forEach(System.out::println);
+            }//Fin caso 2
+            case 3 -> {// Salir del ciclo
+                System.out.println("Hasta Pronto ");
+            salir = true;
+            }// Fin caso 3
+            default -> System.out.println("Opcion incorrecta: " + opcion);
+        }// Fin del switch
+        return salir;
+
     }//Fin del metodo ejecutarOperacion
 }//Fin de la clase ListadoPersonasAPP
