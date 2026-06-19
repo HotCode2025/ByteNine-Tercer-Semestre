@@ -38,11 +38,13 @@ La siguiente tabla resume el contenido cubierto en cada clase, detallando la fec
 
 | Clase | Fecha | Tema Principal | Código / Repositorio |
 | :---: | :---: | :--- | :---: |
-| **1** | `08-04` | Proyecto MundoPC | [📂 Ir a Lección 1](https://github.com/HotCode2025/ByteNine-Tercer-Semestre/tree/Rama-Secundaria/Tecnicatura3J/Leccion01) |
-| **2** | `15-04` | Bloques de Inicialización | [📂 Ir a Lección 2](https://github.com/HotCode2025/ByteNine-Tercer-Semestre/tree/Rama-Secundaria/Tecnicatura3J/Leccion02) |
-| **3** | `22-04` | forEach, Autoboxing, Unboxing y Modificadores de acceso | [📂 Ir a Lección 3](https://github.com/HotCode2025/ByteNine-Tercer-Semestre/tree/Rama-Secundaria/Tecnicatura3J/Leccion03) |
-| **4** | `29-04` | Sobreescritura, Polimorfismo y operador instanceof | [📂 Ir a Lección 4](https://github.com/HotCode2025/ByteNine-Tercer-Semestre/tree/Rama-Secundaria/Tecnicatura3J/Leccion04) |
-| **5** | `06-05` | Conversión de objetos (Downcasting/Upcasting), hashCode, equals y Abstracción | [📂 Ir a Lección 5](https://github.com/HotCode2025/ByteNine-Tercer-Semestre/tree/Rama-Secundaria/Tecnicatura3J/Leccion05) |
+| **1** | `08-04` | Proyecto MundoPC | [📂 Ir a Lección 1](https://github.com/HotCode2025/ByteNine-Tercer-Semestre/tree/main/Tecnicatura3J/Leccion01) |
+| **2** | `15-04` | Bloques de Inicialización | [📂 Ir a Lección 2](https://github.com/HotCode2025/ByteNine-Tercer-Semestre/tree/main/Tecnicatura3J/Leccion02) |
+| **3** | `22-04` | forEach, Autoboxing, Unboxing y Modificadores de acceso | [📂 Ir a Lección 3](https://github.com/HotCode2025/ByteNine-Tercer-Semestre/tree/main/Tecnicatura3J/Leccion03) |
+| **4** | `29-04` | Sobreescritura, Polimorfismo y operador instanceof | [📂 Ir a Lección 4](https://github.com/HotCode2025/ByteNine-Tercer-Semestre/tree/main/Tecnicatura3J/Leccion04) |
+| **5** | `06-05` | Conversión de objetos (Downcasting/Upcasting), hashCode, equals y Abstracción | [📂 Ir a Lección 5](https://github.com/HotCode2025/ByteNine-Tercer-Semestre/tree/main/Tecnicatura3J/Leccion05) |
 | **6** | `13-05` | Instalación y Configuración de Docker |  |
-| **7** | `20-05` | Interfaces en Java | [📂 Ir a Lección 6](https://github.com/HotCode2025/ByteNine-Tercer-Semestre/tree/Rama-Secundaria/Tecnicatura3J/Leccion06) |
-| **8** | `27-05` | Excepciones y JavaBeans | [📂 Ir a Lección 7](https://github.com/HotCode2025/ByteNine-Tercer-Semestre/tree/Rama-Secundaria/Tecnicatura3J/Leccion07) Y [📂 Ir a Lección 8](https://github.com/HotCode2025/ByteNine-Tercer-Semestre/tree/Rama-Secundaria/Tecnicatura3J/Leccion08) |
+| **7** | `20-05` | Interfaces en Java | [📂 Ir a Lección 6](https://github.com/HotCode2025/ByteNine-Tercer-Semestre/tree/main/Tecnicatura3J/Leccion06) |
+| **8** | `27-05` | Excepciones y JavaBeans | [📂 Ir a Lección 7](https://github.com/HotCode2025/ByteNine-Tercer-Semestre/tree/main/Tecnicatura3J/Leccion07) Y [📂 Ir a Lección 8](https://github.com/HotCode2025/ByteNine-Tercer-Semestre/tree/main/Tecnicatura3J/Leccion08) |
+| **9** | `03-06` | Proyecto: CalculadoraUTN | [📂 Ir a Lección 9](https://github.com/HotCode2025/ByteNine-Tercer-Semestre/tree/main/Tecnicatura3J/Leccion09) |
+| **10** | `10-06` | Proyecto Listar Personas | [📂 Ir a Lección 10](https://github.com/HotCode2025/ByteNine-Tercer-Semestre/tree/main/Tecnicatura3J/Leccion10) Y [📂 Ir a Lección 11](https://github.com/HotCode2025/ByteNine-Tercer-Semestre/tree/main/Tecnicatura3J/Leccion11) |
