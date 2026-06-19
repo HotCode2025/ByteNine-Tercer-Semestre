@@ -1,0 +1,110 @@
+/* estilos salto del caballo */
+
+body {
+  background-color: #1a1a2e;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #e0c080;
+  margin-bottom: 5px;
+}
+
+p {
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+#tablero {
+  display: grid;
+  grid-template-columns: repeat(8, 60px);
+  grid-template-rows: repeat(8, 60px);
+  gap: 2px;
+  margin: 0 auto 20px auto;
+  width: fit-content;
+  border: 3px solid #e0c080;
+}
+
+.celda {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.clara {
+  background-color: #f0d9b5;
+  color: #333;
+}
+
+.oscura {
+  background-color: #b58863;
+  color: #fff;
+}
+
+.visitada {
+  background-color: #5a9e6f !important;
+  color: white;
+}
+
+.caballo {
+  background-color: #e63946 !important;
+  color: white;
+  font-size: 28px;
+}
+
+/* botones */
+.controles {
+  margin-bottom: 15px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #e0c080;
+  color: #1a1a2e;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #c8a84b;
+}
+
+button:disabled {
+  background-color: #555;
+  color: #999;
+  cursor: default;
+}
+
+/* velocidad */
+.velocidad-wrap {
+  margin-bottom: 15px;
+}
+
+label {
+  color: #aaa;
+  font-size: 13px;
+}
+
+input[type="range"] {
+  margin: 0 8px;
+  cursor: pointer;
+  accent-color: #e0c080;
+}
+
+/* estado */
+#estado {
+  color: #e0c080;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
