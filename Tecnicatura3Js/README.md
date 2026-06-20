@@ -41,3 +41,6 @@ Las siguientes herramientas son de uso obligatorio para garantizar la compatibil
 | **5** | `04-05` | Función flecha (Arrow Function) | [📂 Ir a Lección 5](https://github.com/HotCode2025/ByteNine-Tercer-Semestre/tree/Rama-Secundaria/Tecnicatura3Js/Leccion05) |
 | **6** | `11-05` | Callback: setTimeout y setInterval | [📂 Ir a Lección 6](https://github.com/HotCode2025/ByteNine-Tercer-Semestre/tree/Rama-Secundaria/Tecnicatura3Js/Leccion06) |
 | **7** | `18-05` | Prácticas con JavaScript: Las N Reinas | [📂 Ir a Práctica](https://github.com/HotCode2025/ByteNine-Tercer-Semestre/tree/main/Practica/Reinas) |
+| **8** | `01-06` | Prácticas con JavaScript: El salto del caballo | [📂 Ir a Práctica](https://github.com/HotCode2025/ByteNine-Tercer-Semestre/tree/main/Practica/SaltoCaballo) |
+| **8** | `01-06` | Prácticas con JavaScript: Torres de Hanoi | [📂 Ir a Práctica](https://github.com/HotCode2025/ByteNine-Tercer-Semestre/tree/main/Practica/torres-hanoi) |
+| **9** | `08-06` | Promise en JavaScript | [📂 Ir a Lección 10](https://github.com/HotCode2025/ByteNine-Tercer-Semestre/tree/main/Tecnicatura3Js/Leccion10) |
